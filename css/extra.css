@@ -1,0 +1,35 @@
+body {
+  font-family: "Source Sans Pro",sans-serif;
+  font-size: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 0.8em;
+}
+
+th, td {
+  padding: 8px;
+}
+
+th {
+  background-color: #0b3860;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+h1, h2, h3 {
+  color: #0b3860;
+}
+
+.wy-side-nav-search {
+  background-color: #0b3860;
+}
+
+.wy-nav-side {
+  color: #ffffff;
+  background: #0b3860;
+}

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="http://riskdatalibrary.org/loss.html">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Loss - Risk Data Library docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Loss";
+    var mkdocs_page_input_path = "loss.md";
+    var mkdocs_page_url = "/loss.html";
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Risk Data Library docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Risk Data Library</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="primer.html">Primer</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="usecases.html">Use cases</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="keyconcepts.html">Key concepts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="standards.html">Core standards</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="taxonomy.html">Taxonomy</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data model</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="hazard.html">Hazard</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="exposure.html">Exposure</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vulnerability.html">Vulnerability</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="loss.html">Loss</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#table-lossmodel">Table: loss.model</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-lossmap">Table: loss.map</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-lossmap_values">Table: loss.map_values</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-losscurve_map">Table: loss.curve_map</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-losscurve_map_values">Table: loss.curve_map_values</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#types">Types</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy RDL</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="data-preparation.html">Prepare data</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="data-import.html">Publish data</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="history.html">History</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="governance.html">Governance</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="license.html">License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Risk Data Library docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Data model &raquo;</li>
+        
+      
+    
+    <li>Loss</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/GFDRR/rdl-docs/tree/main/docs/loss.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="loss-db-schema">Loss DB schema</h2>
+<p>The modelled loss schema enables return period loss estimates and annual average loss to be stored and linked to a geographic unit. 
+Loss datasets can be directly linked to the hazard, exposure, and vulnerability datasets which were used to create the modelled losses via fields in <em>loss.model</em>. 
+The dataset also summarises the exposure and hazard types to which the losses relate, independent of those links. </p>
+<p>Enumerated types provide consistent categories for referencing losses as:
+- Category: Buildings, Contents, Direct Damage to other Asset, or Business Interruption
+- Frequency: Return Period, Probability of exceedance, or Rate of exceedance
+- Loss type: Ground Up (economic) or Insured
+- Metric: Annual average loss, Annual average loss ratio, or Probable maximum loss.</p>
+<p>Each model has any number of loss maps which in turn have any number of geospatially referenced loss values. 
+The meta-data in the loss map table describes the type of losses, occupancy, return period, metric used and so on. 
+Similarly, a model can also have any number of loss curve maps, with any number of geospatially referenced loss curve value arrays. 
+The associated loss and loss curve values may optionally include an asset reference to link to elements from an exposure model.</p>
+<p><img alt="Screenshot" src="img/loss.png" />
+ERD (modeled loss schema): loss table contents (violet) and links to common tables (yellow). The schema includes a SQL view (pink).</p>
+<h3 id="table-lossmodel">Table: <em>loss.model</em></h3>
+<p>Each entry in this table represents a single loss model, describing the hazard and process, and data used to generate the losses.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Req</strong></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Type</strong></th>
+<th scope="col"><strong>Reference table</strong></th>
+<th scope="col"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong><em>*</em></strong></td>
+<td>id</td>
+<td>INT</td>
+<td></td>
+<td>Unique number ID</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>name</td>
+<td>VARCHAR</td>
+<td><em>loss.model</em></td>
+<td>Name of source model</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>description</td>
+<td>TEXT</td>
+<td></td>
+<td>Description of source model</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>hazard_type</td>
+<td>VARCHAR</td>
+<td><em>hazard.hazard_type</em></td>
+<td>2-digit code</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>process_type</td>
+<td>VARCHAR</td>
+<td><em>hazard.process_type</em></td>
+<td>3-digit code</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>hazard_link</td>
+<td>VARCHAR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>exposure_link</td>
+<td>VARCHAR</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>vulnerability_link</td>
+<td>VARCHAR</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="table-lossmap">Table: <em>loss.map</em></h3>
+<p>Each entry in this table represents a collection of loss values with unit and loss type and metric, for a given occupancy type, return period and loss component (building, contents) produced by a loss model. 
+Loss exceedance curves are contained elsewhere, in <em>loss.curve_map</em>.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Req</strong></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Type</strong></th>
+<th scope="col"><strong>Reference table</strong></th>
+<th scope="col"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>id</td>
+<td>INT</td>
+<td></td>
+<td>Unique number ID</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>loss_model_id</td>
+<td>INT</td>
+<td><em>loss.model</em></td>
+<td>Unique number ID of source loss model</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>occupancy</td>
+<td><em>cf_common.occupancy_enum</em></td>
+<td></td>
+<td>Destination of use of the asset</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>component</td>
+<td><em>loss.component_enum</em></td>
+<td></td>
+<td>Type of affected component (e.g. buildings)</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>loss_type</td>
+<td><em>loss.loss_type_enum</em></td>
+<td></td>
+<td>Type of loss (e.g. ground-up)</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>return_period</td>
+<td>INT</td>
+<td></td>
+<td>Number of return period in years</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>units</td>
+<td>VARCHAR</td>
+<td></td>
+<td>Cost unit of measure</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>metric</td>
+<td><em>loss.metric_enum</em></td>
+<td></td>
+<td>Type of loss metric (e.g. AAL)</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="table-lossmap_values">Table: <em>loss.map_values</em></h3>
+<p>Each entry in this table represents the loss value and location of the value, with the value relating to the information in <em>loss.map</em>.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Req</strong></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Type</strong></th>
+<th scope="col"><strong>Reference table</strong></th>
+<th scope="col"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>id</td>
+<td>BIGINT</td>
+<td></td>
+<td>Unique number ID</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>loss_map_id</td>
+<td>INT</td>
+<td><em>loss.map</em></td>
+<td>Unique number ID of reference loss map</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>asset_ref</td>
+<td>VARCHAR</td>
+<td></td>
+<td>Alphanumeric code that identifies asset from exposure model</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>loss</td>
+<td>FLOAT</td>
+<td></td>
+<td>Loss value in the unit specified in loss_map</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>the_geom</td>
+<td>GEOM</td>
+<td></td>
+<td>Associated geometry</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="table-losscurve_map">Table: <em>loss.curve_map</em></h3>
+<p>Each entry in this table represents a collection of loss exceedance curves associated with the loss model. 
+It describes the unit, type and metric of the loss, which is provided for a given occupancy type, and loss component (building, contents) produced by a loss model. </p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Req</strong></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Type</strong></th>
+<th scope="col"><strong>Reference table</strong></th>
+<th scope="col"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>id</td>
+<td>INT</td>
+<td></td>
+<td>Unique number ID</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>loss_model_id</td>
+<td>INT</td>
+<td><em>loss.model</em></td>
+<td>Unique number ID of reference loss model</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>occupancy</td>
+<td>cf_common.occupancy_enum</td>
+<td></td>
+<td>Destination of use of the asset</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>component</td>
+<td>loss.component_enum</td>
+<td></td>
+<td>Component affected by loss</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>loss_type</td>
+<td>loss.loss_type_enum</td>
+<td></td>
+<td>Type of loss</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>frequency</td>
+<td>loss.frequency_enum</td>
+<td></td>
+<td>Frequency representation type</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>investigation_time</td>
+<td>INT</td>
+<td></td>
+<td>Investigation time in years (required if frequency is different from &#39;Return Period&#39;)</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>units</td>
+<td>VARCHAR</td>
+<td></td>
+<td>Unit of measure of loss (e.g. USD, tons, etc)</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="table-losscurve_map_values">Table: <em>loss.curve_map_values</em></h3>
+<p>Each entry in this table provides the values for a loss esceedance curve and location to which the curve relates, with the value relating to the information in <em>loss.curve_map</em>.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Req</strong></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Type</strong></th>
+<th scope="col"><strong>Reference table</strong></th>
+<th scope="col"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>id</td>
+<td>BIGINT</td>
+<td></td>
+<td>Unique number ID</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>loss_curve_map_id</td>
+<td>INT</td>
+<td><em>loss.map</em></td>
+<td>Unique number ID of reference loss curve map</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>asset_ref</td>
+<td>VARCHAR</td>
+<td></td>
+<td>Alphanumeric code that identifies asset from exposure model</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>losses</td>
+<td>VARCHAR</td>
+<td></td>
+<td>Loss values in the unit specified in <em>loss_curve_map</em></td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>rates</td>
+<td>FLOAT</td>
+<td></td>
+<td>Rate values associates with losses</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>the_geom</td>
+<td>GEOM</td>
+<td></td>
+<td>Associated geometry</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="types">Types</h3>
+<p>Includes 4 types including the options for asset categories to which loss refers to, how the frequency is expressed, what is the metric in use and the types of losses.</p>
+<table class="table">
+<thead>
+<tr>
+<th scope="col"><strong>ENUM name</strong></th>
+<th scope="col">Types</th>
+<th scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Category_enum</td>
+<td><ul><li>Buildings<li>Indicator<li>Infrastructure<li>Crops, livestock and forestry</td>
+<td>Types of possible asset categories, consistent with the exposure schema. Indicators refers for example to population density or GDP; infrastructure refers for example to roads, or electricity grid.</td>
+</tr>
+<tr>
+<td>frequency_enum</td>
+<td><ul><li>Rate of Exceedence<li>Probability of Exceedence<li>Return Period</td>
+<td>How the frequency value reported in <em>loss.curve_map</em> is expressed.</td>
+</tr>
+<tr>
+<td>metric_enum</td>
+<td><ul><li>AAL<li>AALR<li>PML</td>
+<td>Type of loss metric used in <em>loss.curve_map</em> and <em>loss.map</em><br/><br/>Note:<br>AAL = Annual Average Losses<br>AALR = Average Annual Loss Ratio<br>PML = Probable Maximal Loss (also known as Return Period Loss)</td>
+</tr>
+<tr>
+<td>loss_type_enum</td>
+<td><ul><li>Ground Up<li>Insured</td>
+<td>Type of losses in <em>loss.curve_map</em> and <em>loss.map</em>.</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="implementation.html" class="btn btn-neutral float-right" title="Implementation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="vulnerability.html" class="btn btn-neutral" title="Vulnerability"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/GFDRR/rdl-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="vulnerability.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="implementation.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

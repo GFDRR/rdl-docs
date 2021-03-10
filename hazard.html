@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="http://riskdatalibrary.org/hazard.html">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Hazard - Risk Data Library docs</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="css/extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Hazard";
+    var mkdocs_page_input_path = "hazard.md";
+    var mkdocs_page_url = "/hazard.html";
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Risk Data Library docs</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption"><span class="caption-text">Risk Data Library</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="primer.html">Primer</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="usecases.html">Use cases</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="keyconcepts.html">Key concepts</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="standards.html">Core standards</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="taxonomy.html">Taxonomy</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Data model</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="hazard.html">Hazard</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#table-hazardevent_set">Table: hazard.event_set</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-hazardevent">Table: hazard.event</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-hazardfootprint_set">Table: hazard.footprint_set</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-hazardfootprint">Table: hazard.footprint</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#table-hazardfootprint_data">Table: hazard.footprint_data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#types">Types</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="exposure.html">Exposure</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="vulnerability.html">Vulnerability</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Tutorials</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy RDL</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="data-preparation.html">Prepare data</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="data-import.html">Publish data</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="history.html">History</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="governance.html">Governance</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="license.html">License</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Risk Data Library docs</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Data model &raquo;</li>
+        
+      
+    
+    <li>Hazard</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/GFDRR/rdl-docs/tree/main/docs/hazard.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="hazard-db-schema">Hazard DB schema</h2>
+<p>The hazard schema stores hazard scenario footprints and probabilistic hazard maps for multiple hazards. 
+Hazards can be further defined into process types, each with a defined intensity unit as in <em>cf_common.imt</em>. 
+For example, earthquake hazard may be represented as ground shaking, liquefaction or ground displacement.</p>
+<p>The data structure contains entities nested as follows:</p>
+<pre><code>Event_set ( Event ( Footprint_set ( Footprint ( Footprint_data) ) ) )
+</code></pre>
+<p>The &quot;Event set&quot; stores one or more scenarios for a specific hazard. 
+One &quot;Event&quot; represents one specific scenario (e.g. RP100, or one historical event). 
+For each Event, one more &quot;Footprint_set&quot; can be available.  This is a container for one or several &quot;Footprints&quot; where each is one possible realisation of an event. 
+Uncertainty in the event characteristics and hazard footprint can be represented explicitly, through the inclusion of multiple events in an event set, and many footprints per event. 
+Hazard footprints can be linked to another &#39;trigger event&#39; footprint to represent cascading hazards. 
+Hazard footprints can be assigned an occurrence frequency, and can represent a scenario footprint or return period hazard map. 
+Inclusion of an event start and end time enables description of long-duration events.</p>
+<p><img alt="Screenshot" src="img/hazard.png" />
+ERD (hazard schema): hazard table contents (red) and links to common tables (yellow).</p>
+<h3 id="table-hazardevent_set">Table: <em>hazard.event_set</em></h3>
+<p>The &quot;event.set&quot; entity contains information on a set of events for a given area, with event set duration, description, bibliography and defines the event set as probabilistic or deterministic.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Req</strong></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Type</strong></th>
+<th scope="col"><strong>Reference table</strong></th>
+<th scope="col"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>id</td>
+<td>INT</td>
+<td></td>
+<td>Unique number ID</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>hazard_type</td>
+<td>VARCHAR</td>
+<td><em>cf_common.hazard_type</em></td>
+<td>Unique 2-char code</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>creation_date</td>
+<td>date</td>
+<td></td>
+<td>The date of creation [ISO 8601 format]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>time_start</td>
+<td>timestamp</td>
+<td></td>
+<td>The time at which the modelled scenario(s) starts [ISO 8601 format]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>time_end</td>
+<td>timestamp</td>
+<td></td>
+<td>The time at which the modelled scenario(s) ends [ISO 8601 format]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>time_duration</td>
+<td>interval</td>
+<td></td>
+<td>The extent of the time period covered by the events included in the current scenario hazard analysis [ISO 8601 format]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>description</td>
+<td>TEXT</td>
+<td></td>
+<td>General information about this specific scenario hazard analysis</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>bibliography</td>
+<td>TEXT</td>
+<td></td>
+<td>Title and authors of studies containing relevant information</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>is_prob</td>
+<td>BOOL</td>
+<td></td>
+<td>Wheter the event set represents a probabilistic (TRUE) or a deterministic (FALSE) analysis.</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>the_geom</td>
+<td>GEOM</td>
+<td></td>
+<td>Associated geometry data (bounding box of data)</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="table-hazardevent">Table: <em>hazard.event</em></h3>
+<p>The &quot;Event&quot; entity contains information about one specific scenario or hazard map included in an &quot;Event Set&quot;. 
+The information comprises event duration, occurrence probability or frequency, the hazard and process type, a link to a possible triggering event (for cascading events) and a text description for more context about magnitude, for example.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Req</strong></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Type</strong></th>
+<th scope="col"><strong>Reference table</strong></th>
+<th scope="col"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>id</td>
+<td>INT</td>
+<td></td>
+<td>Unique number ID</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>event_set_id</td>
+<td>INT</td>
+<td><em>hazard.event_set</em></td>
+<td>Unique number ID of source exposure model</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>calculation_method</td>
+<td>ENUM</td>
+<td></td>
+<td>The methodology used for the calculation of this event</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>frequency</td>
+<td>FLOAT</td>
+<td></td>
+<td>The frequency of occurrence of the present event (for the reference period see occurrence_time_span or occurrence_time_start and occurrence_time_end).</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>occurrence_probability</td>
+<td>FLOAT</td>
+<td></td>
+<td>The probability of occurrence in a given time interval defined either through the occurrence_time_start and occurrence_time_end or through the occurrence_time_span parameter. [float, adimensional]]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>occurence_time_start</td>
+<td>timestamp</td>
+<td></td>
+<td>The start date (and possibly time) of the time period used to specify either the frequency or the occurrence_probability [ISO 8601 format]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>occurence_time_end</td>
+<td>timestamp</td>
+<td></td>
+<td>The end date (and possibly time) of the time period used to specify either the frequency or the occurrence_probability [ISO 8601 format]</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>occurence_time_span</td>
+<td>interval</td>
+<td></td>
+<td>The duration (years) of the period used to specify either the frequency or the occurrence_probability</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>trigger_hazard_type</td>
+<td>VARCHAR</td>
+<td><em>cf_common.hazard_type</em></td>
+<td>Hazard type that triggered the event</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>trigger_process_type</td>
+<td>VARCHAR</td>
+<td><em>cf_common.process_type</em></td>
+<td>Process type that triggered the event</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>trigger_event_id</td>
+<td>INT</td>
+<td></td>
+<td>The ID of a event which is trigger for the simulation of the corresponding footprints</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>description</td>
+<td>TEXT</td>
+<td></td>
+<td>Provides additional information about this specific event</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="table-hazardfootprint_set">Table: <em>hazard.footprint_set</em></h3>
+<p>The &quot;Footprint set&quot; entity contains a sub-group of the &quot;Footprints&quot; computed for an &quot;Event&quot;; all the &quot;Footprint&quot; in a &quot;Footprint Set&quot; have the same unit of measure, represent the same process type and their uncertainty is described in a homogenous way. Every &quot;Footprint Set&quot; instance will have the following attributes.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Req</strong></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Type</strong></th>
+<th scope="col"><strong>Reference table</strong></th>
+<th scope="col"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>id</td>
+<td>INT</td>
+<td></td>
+<td>Unique number ID</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>event_id</td>
+<td>INT</td>
+<td><em>hazard.event</em></td>
+<td>The event.id parameter to which this footprint is associated</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>process_type</td>
+<td>VARCHAR</td>
+<td><em>cf_common.process_type</em></td>
+<td>The typology of hazard process</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>imt</td>
+<td>VARCHAR</td>
+<td></td>
+<td>Intensity measure types</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>data_uncertainty</td>
+<td>VARCHAR</td>
+<td></td>
+<td>This attribute describes the typology of uncertainty</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="table-hazardfootprint">Table: <em>hazard.footprint</em></h3>
+<p>The &quot;Footprint&quot; entity contains information on a specific realisation of an &quot;Event&quot;. 
+The uncertainty of a particular event is captured either by the construction of many footprints or by a single footprint which contains information about uncertainty.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Req</strong></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Type</strong></th>
+<th scope="col"><strong>Reference table</strong></th>
+<th scope="col"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>id</td>
+<td>INT</td>
+<td></td>
+<td>Unique number ID</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>footprint_set_id</td>
+<td>INT</td>
+<td><em>hazard.footprint_set</em></td>
+<td>The footprint_set.id parameter to which this footprint is associated</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>trigger_footprint</td>
+<td>INT</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>uncertainty_2nd_moment</td>
+<td>FLOAT</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="table-hazardfootprint_data">Table: <em>hazard.footprint_data</em></h3>
+<p>The &quot;Footprint_data&quot; entity contains the footprint data: the value of intensity according to the intensity measure (IMT) described in &quot;Footprint set&quot;, and the point location of the intensity value.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Req</strong></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Type</strong></th>
+<th scope="col"><strong>Reference table</strong></th>
+<th scope="col"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>id</td>
+<td>INT</td>
+<td></td>
+<td>Unique number ID</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>footprint_id</td>
+<td>INT</td>
+<td><em>hazard.footprint</em></td>
+<td>The footprint.id parameter to which this footprint data is associated</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>the_geom</td>
+<td>GEOM</td>
+<td></td>
+<td>Associated geometry data (point location)</td>
+</tr>
+<tr>
+<td align="center"><strong>*</strong></td>
+<td>intensity</td>
+<td>FLOAT</td>
+<td></td>
+<td>The hazad process intensity value in the IMT described in &quot;Footprint set&quot;</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="types">Types</h3>
+<table class="table">
+<thead>
+<tr>
+<th scope="col"><strong>ENUM name</strong></th>
+<th scope="col">Types</th>
+<th scope="col">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>calc_method_enum</td>
+<td><ul><li>Inferred<li>Simulated<li>Observed</td>
+<td>Type of calculation method applied to produce hazard footprint.</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="exposure.html" class="btn btn-neutral float-right" title="Exposure">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/GFDRR/rdl-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="overview.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="exposure.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
