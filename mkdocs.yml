@@ -1,27 +1,33 @@
 site_name: Risk Data Library docs
 site_url: http://riskdatalibrary.org
 use_directory_urls: false
-repo_url: https://github.com/GFDRR/rdl-doc
+repo_url: https://github.com/GFDRR/rdl-docs
 edit_uri: tree/main/docs
 
 nav:
-- Home:
-    - 'Introduction': 'index.md'
-- Data schemas:
+- Risk Data Library:
+    - 'Primer': 'index.md'
+    - 'Introduction': 'introduction.md'
+    - 'Use cases': 'usecases.md'
+    - 'Key concepts': 'keyconcepts.md'
+    - 'Core standards': 'standards.md'
+    - 'Taxonomy': 'taxonomy.md'
+- Data model:
     - 'Overview': 'overview.md'
-    - 'Common tables': 'common.md'
-    - 'Hazard schema': 'hazard.md'
-    - 'Exposure schema': 'exposure.md'
-    - 'Vulnerability schema': 'vulnerability.md'
-    - 'Loss schema': 'loss.md'
-- Data transfer:
-    - Import Data: 'import.md'
-    - Access Data: 'export.md'
-- Additional info:
-    - 'Metadata': 'metadata.md'
-    - 'Glossary': 'glossary.md'
+    - 'Hazard': 'hazard.md'
+    - 'Exposure': 'exposure.md'
+    - 'Vulnerability': 'vulnerability.md'
+    - 'Loss': 'loss.md'
+    - 'Implementation': 'implementation.md'
+- Tutorials:
+    - 'Deploy RDL': 'deploy.md'
+    - 'Prepare data': 'data-preparation.md'
+    - 'Publish data': 'data-import.md'
+- About:
+    - 'Roadmap': 'roadmap.md'
+    - 'History': 'history.md'
+    - 'Governance': 'governance.md'
     - 'License': 'license.md'
-    - 'FAQ': 'faq.md'
 
 theme: readthedocs
 

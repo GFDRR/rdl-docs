@@ -1,10 +1,10 @@
 # DATABASE SCHEMA OVERVIEW
 
-The unified database hosting the schema and the risk data is stored at [https://github.com/GFDRR/rdl-data](https://github.com/GFDRR/rdl-data).
+high-level simplified UML-style diagram that focuses on the core relationships between entities, rather than listing all of their attributes. This helps to put the various entities in context. 
+a description of how the key elements of the model fit together, with pointers to the detailed sections
 
---WIP--
-The database is implemented in PostgreSQL, using PostGIS for geospatial operations.
---WIP
+
+
 
 The Risk DB schema includes four components:
 
