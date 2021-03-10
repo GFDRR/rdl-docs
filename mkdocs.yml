@@ -1,0 +1,33 @@
+site_name: Risk Data Library docs
+site_url: http://riskdatalibrary.org
+use_directory_urls: false
+repo_url: https://github.com/GFDRR/rdl-doc
+edit_uri: tree/main/docs
+
+nav:
+- Home:
+    - 'Introduction': 'index.md'
+- Data schemas:
+    - 'Overview': 'overview.md'
+    - 'Common tables': 'common.md'
+    - 'Hazard schema': 'hazard.md'
+    - 'Exposure schema': 'exposure.md'
+    - 'Vulnerability schema': 'vulnerability.md'
+    - 'Loss schema': 'loss.md'
+- Data transfer:
+    - Import Data: 'import.md'
+    - Access Data: 'export.md'
+- Additional info:
+    - 'Metadata': 'metadata.md'
+    - 'Glossary': 'glossary.md'
+    - 'License': 'license.md'
+    - 'FAQ': 'faq.md'
+
+theme: readthedocs
+
+extra_css:
+    - css/extra.css
+
+plugins:
+  - search
+  - bootstrap-tables
