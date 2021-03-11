@@ -69,18 +69,6 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="hazard.html">Hazard</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#table-hazardevent_set">Table: hazard.event_set</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#table-hazardevent">Table: hazard.event</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#table-hazardfootprint_set">Table: hazard.footprint_set</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#table-hazardfootprint">Table: hazard.footprint</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#table-hazardfootprint_data">Table: hazard.footprint_data</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#types">Types</a>
-    </li>
     </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="exposure.html">Exposure</a>
@@ -89,6 +77,9 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a>
                     </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Implementation</span></p>
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a>
                     </li>
                 </ul>
@@ -151,10 +142,298 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="hazard-db-schema">Hazard DB schema</h2>
-<p>The hazard schema stores hazard scenario footprints and probabilistic hazard maps for multiple hazards. 
-Hazards can be further defined into process types, each with a defined intensity unit as in <em>cf_common.imt</em>. 
-For example, earthquake hazard may be represented as ground shaking, liquefaction or ground displacement.</p>
+                <h2 id="hazard">Hazard</h2>
+<p>The hazard schema stores data about the intensity and occurrance probability of physical hazard phenomena such as floods, eartquakes, wildfires or others. The specific hazard process can be defined and measured with a specific intensity unit. For example, earthquake hazard may be represented as ground shaking, liquefaction or ground displacement.</p>
+<p>Hazard data are most often represented by geospatial grids (raster).</p>
+<p>Some figures as data example?
+[ex_hazards1] [ex_hazards2] [ex_hazards3]</p>
+<p>The schema specifies which type of analysis and data methodology that has generated the dataset. It supports either simulated probabilistic scenarios and empirical observations. If the dataset has been produced for a specific location, such a city, the name of the location can be included.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Required</strong></th>
+<th scope="col"><strong>Attribute</strong></th>
+<th scope="col"><strong>Description</strong></th>
+<th scope="col"><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">*</td>
+<td>Hazard type</td>
+<td>Main hazard type from list of options</td>
+<td><ul><li>Coastal Flood<li>Convective Storm<li>Drought<li>Earthquake<li>Extreme Temperature<li>Flood<li>Landslide<li>Tsunami<li>Volcanic<li>Wildfire<li>Strong Wind<li>Multi-Hazard</ul></td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Analysis type</td>
+<td>Type of analysis that generated the data</td>
+<td><ul><li>Deterministic<li>Probabilistic</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Calculation method</td>
+<td>The methodology used for the modelling of hazard</td>
+<td><ul><li>Simulated<li>Observed<li>Inferred</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Geographic area</td>
+<td>Specific location for which the dataset has been developed</td>
+<td>Name of location</td>
+</tr>
+</tbody>
+</table>
+<p><br>When the scenario modelled refers to a specific period of time, this can be specified in terms of dates, period span and reference year. For example, an observed flood event that occurred from 1.10.2009 (time start) to 3.10.2009 (time end), spanning over 3 days (time span). When precise time collocation is unknow or inappkicabile, a general reference date such as "2009" is used to identify events (time year). This is also useful to specify future scenario, e.g. time year: 2050.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Required</strong></th>
+<th scope="col"><strong>Attribute</strong></th>
+<th scope="col"><strong>Description</strong></th>
+<th scope="col"><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"></td>
+<td>Time start</td>
+<td>The time at which the modelled scenario starts</td>
+<td>Date</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Time end</td>
+<td>The time at which the modelled scenario ends</td>
+<td>Date</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Time span</td>
+<td>The duration of the modelled period</td>
+<td>Number</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Time year</td>
+<td>One reference year to univocally identify the scenario</td>
+<td>Date (year)</td>
+</tr>
+</tbody>
+</table>
+<p><br>When the hazard scenario is represented in probabilistic terms, the occurrance probability (frequency distribution) of hazard can be expressed in different ways. The most common way to communicate this is the "return period", expressed as the number of years after which a given hazard intensity could occurr again: RP 100 indicates that that event has a probability of once in 100 years. The probability of occurrance is usually calculated on the basis of a reference period that provides observations: this period can be specified by start date, end date and time span. For example, an analysis of eartquake frequency based on seismic observations from 1934 (occurrance time start) to 2001 (occurrance time end), for a total count of 66 years (occurrance time span).</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Required</strong></th>
+<th scope="col"><strong>Attribute</strong></th>
+<th scope="col"><strong>Description</strong></th>
+<th scope="col"><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"></td>
+<td>Frequency type</td>
+<td>The frequency of occurrence of the present event</td>
+<td><ul><li>Rate of Exceedence<li>Probability of Exceedence<li>Return Period</ul></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Occurrance probability</td>
+<td>For probabilistic scenario, the occurrance probability is expressed accordig to frequency type. Can indicate individual layer frequency (RP10) or a range of frequencies for a collection of layers (RP10-50)</td>
+<td>Text</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Occurence time (start)</td>
+<td>Start date of the period used to infer the occurrence probability</td>
+<td>Date (year)</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Occurence time (end)</td>
+<td>End date of the period used to specify the occurrence probability</td>
+<td>Date (year)</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Occurence time (span)</td>
+<td>The duration of the period used to specify either the frequency or the occurrence_probability</td>
+<td>Number of years</td>
+</tr>
+</tbody>
+</table>
+<p><br>The schema distinguish between the hazard and process represented and the hazard and process identified as the cause, or concause for the manifestation of the represented hazard. For example, a dataset represent landslide hazard that is triggered by an earthquake will have Hazard type: Landslide; Trigger hazard type: Earthquake. The unit of measure refers to the represented hazard and process. A description can be added to cover additional information not included in the schema.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Required</strong></th>
+<th scope="col"><strong>Attribute</strong></th>
+<th scope="col"><strong>Description</strong></th>
+<th scope="col"><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"></td>
+<td>Trigger hazard type</td>
+<td>The hazard type that has triggered the event (if any)</td>
+<td>Hazard type</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Trigger process type</td>
+<td>The process type that triggered the event (if any)</td>
+<td>Process type</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Hazard process</td>
+<td>Specific hazard process</td>
+<td>Process type</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Unit of measure</td>
+<td>Intensity measure of the process</td>
+<td>Option list</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Description</td>
+<td>Provides additional information about a specific event</td>
+<td>Text</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>data_uncertainty</td>
+<td>The typology of uncertainty, if considered</td>
+<td>Text</td>
+</tr>
+</tbody>
+</table>
+<p><br><hr></p>
+<h2 id="previous-version-as-in-the-gh-issue">Previous version (<a href="https://github.com/GFDRR/rdl-doc/issues/6">as in the GH issue</a>)</h2>
+<p>The <em><strong>Event set</strong></em> stores one or more scenarios for a specific hazard. The main hazard type is defined by a specific code defined in common tables. Key attributes are:</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Required</strong></th>
+<th scope="col"><strong>Attribute</strong></th>
+<th scope="col"><strong>Description</strong></th>
+<th scope="col"><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">*</td>
+<td>Hazard type</td>
+<td>Code provided in common tables</td>
+<td><em>FL</em> for Floods</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>description</td>
+<td>General details about this set of layers</td>
+<td><em>Simulated flood depth at country scale</em></td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>is_prob</td>
+<td>Probabilistic or deterministic analysis.</td>
+<td><em>TRUE</em> for probabilistic</td>
+</tr>
+</tbody>
+</table>
+<p><br>Each <strong><em>Event</em></strong> is characterised by three main parameters: the methodology which originated the dataset; the specific occurrance probability, or frequency; and the main and secondary trigger processes which comes before the rapresented hazard in the cascade of events, and are identified as cause, or concause for the manifestation of the represented hazard.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Description</strong></th>
+<th scope="col"><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">*</td>
+<td>calculation_method</td>
+<td>The methodology used for the calculation of this event</td>
+<td><em>Simulated</em> for model simulations; <em>Observed</em> for empirical data; <em>Inferred</em> for models elaborated on empirical data (?)</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>frequency</td>
+<td>The frequency of occurrence of the present event</td>
+<td><em>0.01</em> meaning probability of once in 100 years</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>occurrence_probability</td>
+<td>The occurrance probability</td>
+<td>??</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>occurence_time_span</td>
+<td>The duration (years) of the period used to specify either the frequency or the occurrence_probability</td>
+<td><em>100</em></td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>trigger_hazard_type</td>
+<td>Hazard type that triggered the event</td>
+<td><em>CS</em> (Convective Storm)</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>trigger_process_type</td>
+<td>Process type that triggered the event</td>
+<td><em>TCY</em>  (Tropical Cyclone)</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>description</td>
+<td>Provides additional information about this specific event</td>
+<td><em>The flood has been caused by heavy rainfall during cyclone Karen</em></td>
+</tr>
+</tbody>
+</table>
+<p><br>For each <strong><em>Event</em></strong>, one more <strong><em>Footprint_set</em></strong> can be available, where each is one possible realisation of the event, i.e. one footprint could represent minimum, another footprint the average and another one the maximum. In this way, the event uncertainty can be represented explicitly, through the inclusion of multiple footprints per event. Hazard footprints can be assigned an occurrence frequency, and can represent a scenario footprint or return period hazard map. Inclusion of an event start and end time enables description of long-duration events.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"></th>
+<th scope="col"><strong>Field name</strong></th>
+<th scope="col"><strong>Description</strong></th>
+<th scope="col"><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">*</td>
+<td>process_type</td>
+<td>The typology of hazard process</td>
+<td><em>FPF</em> for Pluvial flood</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>imt</td>
+<td>Intensity measure types</td>
+<td><em>d_fpf:m</em> for water depth</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>data_uncertainty</td>
+<td>This attribute describes the typology of uncertainty</td>
+<td><em>Min to Max range</em></td>
+</tr>
+</tbody>
+</table>
+<p><br><hr></p>
+<h2 id="original-version-as-from-the-other-repo">Original version (<a href="https://github.com/GFDRR/rdl-doc">as from the other repo</a>)</h2>
 <p>The data structure contains entities nested as follows:</p>
 <pre><code>Event_set ( Event ( Footprint_set ( Footprint ( Footprint_data) ) ) )
 </code></pre>
@@ -169,6 +448,7 @@ Inclusion of an event start and end time enables description of long-duration ev
 ERD (hazard schema): hazard table contents (red) and links to common tables (yellow).</p>
 <h3 id="table-hazardevent_set">Table: <em>hazard.event_set</em></h3>
 <p>The &quot;event.set&quot; entity contains information on a set of events for a given area, with event set duration, description, bibliography and defines the event set as probabilistic or deterministic.</p>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -252,10 +532,12 @@ ERD (hazard schema): hazard table contents (red) and links to common tables (yel
 </tr>
 </tbody>
 </table>
+</div>
 <p><br/></p>
 <h3 id="table-hazardevent">Table: <em>hazard.event</em></h3>
 <p>The &quot;Event&quot; entity contains information about one specific scenario or hazard map included in an &quot;Event Set&quot;. 
 The information comprises event duration, occurrence probability or frequency, the hazard and process type, a link to a possible triggering event (for cascading events) and a text description for more context about magnitude, for example.</p>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -353,6 +635,7 @@ The information comprises event duration, occurrence probability or frequency, t
 </tr>
 </tbody>
 </table>
+</div>
 <p><br/></p>
 <h3 id="table-hazardfootprint_set">Table: <em>hazard.footprint_set</em></h3>
 <p>The &quot;Footprint set&quot; entity contains a sub-group of the &quot;Footprints&quot; computed for an &quot;Event&quot;; all the &quot;Footprint&quot; in a &quot;Footprint Set&quot; have the same unit of measure, represent the same process type and their uncertainty is described in a homogenous way. Every &quot;Footprint Set&quot; instance will have the following attributes.</p>

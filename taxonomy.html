@@ -127,6 +127,9 @@
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a>
                     </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Implementation</span></p>
+                <ul>
                     <li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a>
                     </li>
                 </ul>
@@ -213,6 +216,7 @@ In order to summarise all the asset information into a single alphanumeric strin
 <p><code>MATERIAL/HEIGHT/DATE/OCCUPANCY/SHAPE/…</code></p>
 <p>Missing attributes can be skipped from the string, e.g.</p>
 <p>2-floors detached residential dwelling, reinforced concrete structure: <code>CR/H:2/RES1</code>    </p>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -744,6 +748,7 @@ In order to summarise all the asset information into a single alphanumeric strin
 </tr>
 </tbody>
 </table>
+</div>
 <p><br/></p>
 <h3 id="lifelines">Lifelines</h3>
 <p>The <strong>lifelines</strong> taxonomy includes all infrastructures commonly found in populated areas, such as:</p>
@@ -759,6 +764,7 @@ In order to summarise all the asset information into a single alphanumeric strin
 <p>This taxonomy is strongly based on the classification system adopted by OpenStreetMap, since OSM is undoubtedly the largest and most complete source of open information concerning the location of roads and railways.
 The taxonomy string is simply <code>TYPE+CATEGORY</code>, e.g.</p>
 <p>Secondary road: <code>RDN+SE</code></p>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -845,11 +851,13 @@ The taxonomy string is simply <code>TYPE+CATEGORY</code>, e.g.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br/></p>
 <h4 id="pipelines">Pipelines</h4>
 <p>The taxonomy presented herein has been developed using the classification experience developed in Syner-G and STREST (Crowley et al., 2016).
 The taxonomy string is simply <code>PPL/CONTENT/POSITION/MATERIAL/JOINT_TYPE/SOIL_TYPE/DIAMETER</code>, e.g.</p>
 <p>Large elevated pipe for potable water: <code>CPW/PEL/DLG</code></p>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -1066,10 +1074,12 @@ The taxonomy string is simply <code>PPL/CONTENT/POSITION/MATERIAL/JOINT_TYPE/SOI
 </tr>
 </tbody>
 </table>
+</div>
 <p><br/></p>
 <h4 id="energy-generation-and-power-grid">Energy generation and power grid</h4>
 <p>We follow the taxonomy adopted by HAZUS, which allows capturing the capacity (e.g. voltage) of the elements. For the purposes of assessing damage due to natural disasters, it is also relevant to identify the presence of anchorage and  whether the elements have been designed according to a particular code. The taxonomy for component of the power grid can thus be presented in the following manner: <code>PWG/ENERGYSOURCE/COMPONENT/ANCHORAGE/CODE PROVISIONS</code>, e.g.</p>
 <p>Electric ditribution line through pylones: <code>PWG/SSM/ANC</code></p>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -1211,6 +1221,7 @@ The taxonomy string is simply <code>PPL/CONTENT/POSITION/MATERIAL/JOINT_TYPE/SOI
 </tr>
 </tbody>
 </table>
+</div>
 <p><br/></p>
 <h4 id="potable-water-and-wastewater-systems">Potable water and wastewater systems</h4>
 <p>Potable water systems are comprised by water treatment plants, storage tanks, pipelines and pumping stations, while wastewater systems are composed by wasterwater treatment plants, lifting stations and
@@ -1218,6 +1229,7 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 <p>The alphanumeric taxonomy strings are:<br>
 <code>PWR/COMPONENT/ANCHORAGE/CODE PROVISIONS</code> for potable water<br>
 <code>WWR/COMPONENT/ANCHORAGE/CODE PROVISIONS</code> for wasterwater</p>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -1379,6 +1391,7 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br></p>
 <h4 id="communication-systems">Communication systems</h4>
 <p>A communication system is comprised by offices dedicated to the reception and dissimination of information (e.g. telephones offices, call centers, TV stations, radio station, telecomunication stations), supporting transmitter towers and distribution circuits.  The components have been classified based on the classification system proposed by HAZUS. For the purposes of assessing damage due to natural disasters, it is also relevant to identify the presence of anchorage and whether the elements have been designed according to a particular code.
@@ -1469,6 +1482,7 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 <h3 id="crops-livestock-and-forestry">Crops, Livestock and Forestry</h3>
 <p>The taxonomy for crops, livestock and forestry was defined based on existing classification systems supported by the Food and Agriculture Organization (FAO). For crops, the classification system in the 2000 agricultural census programme was adopted. This system comprises a wide range of attributes such as growing cycle (temporary/permanent), crop species, crop variety, season, land type, amongst others. The taxonomy proposed herein uses the first and second categorization levels proposed by FAO, as well as the growing cycle (e.g. permanent or temporary). A simple alphanumeric code is attributed to each class of crop.</p>
 <h4 id="crops">Crops</h4>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -1745,8 +1759,10 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br></p>
 <h4 id="livestock">Livestock</h4>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -1898,8 +1914,10 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br></p>
 <h4 id="forestry">Forestry</h4>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -2006,6 +2024,7 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br></p>
 <h3 id="socio-economic-indicators">Socio-Economic indicators</h3>
 <p>Natural hazards are a complex phenomenon featuring large number of interactions that result into loss of lives, livelihoods and interruption of systems. The socio-economic indicators are related to the capacity of populations to prepare, respond and recover from potential damage. For example, education theme is related to awareness, which is essential for a population to avoid and cope with a disaster. The Socio-economic Indicators taxonomy aims at identifying and describing a set of variables which provide a basis for understanding and measuring resilience, social vulnerability and economic vulnerability. The taxonomy system is divided into eight main themes (economy, education, environment, government and institutional capacity, index, health, infrastructure and population), each theme is later subdivided to different levels of detail. The eight main themes in the Socio-economic Indicator Taxonomy are the following:</p>
@@ -2020,6 +2039,7 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 <li><a href="#infrastructure">Infrastructure</a>: Transportation and communication infrastructure, status and access to utility lifelines</li>
 </ul>
 <h4 id="population">Population</h4>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -2126,8 +2146,10 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br></p>
 <h4 id="economy">Economy</h4>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -2589,8 +2611,10 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br></p>
 <h4 id="education">Education</h4>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -2692,8 +2716,10 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br></p>
 <h4 id="environment">Environment</h4>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -2820,6 +2846,7 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br></p>
 <h4 id="governance">Governance</h4>
 <table class="table">
@@ -2870,6 +2897,7 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 </table>
 <p><br></p>
 <h4 id="health">Health</h4>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -3001,8 +3029,10 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br></p>
 <h4 id="index">Index</h4>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -3057,8 +3087,10 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br></p>
 <h4 id="infrastructure">Infrastructure</h4>
+<div class="scrollbar table-scroll">
 <table class="table">
 <thead>
 <tr>
@@ -3185,6 +3217,7 @@ pipelines. Our classification is based on the HAZUS guidelines.</p>
 </tr>
 </tbody>
 </table>
+</div>
 <p><br></p>
               
             </div>
