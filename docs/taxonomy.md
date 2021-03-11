@@ -30,6 +30,8 @@ Missing attributes can be skipped from the string, e.g.
 
 2-floors detached residential dwelling, reinforced concrete structure: `CR/H:2/RES1`	
 
+<div class="scrollbar table-scroll" markdown="1">
+
 | Attribute | Code | Description |
 |-|:-:|-|
 | Material of the Lateral Load-Resisting System (LLRS) | -- | Unknown material |
@@ -137,6 +139,7 @@ Missing attributes can be skipped from the string, e.g.
 |  |  FW | Wood |
 |  |  FO | Floor material, other |
 
+</div>
 <br/>
 
 ###Lifelines
@@ -157,6 +160,7 @@ The taxonomy string is simply `TYPE+CATEGORY`, e.g.
 
 Secondary road: `RDN+SE`
 
+<div class="scrollbar table-scroll" markdown="1">
 | Attribute | Code | Description |
 |-|:-:|-|
 | Road   network | RDN+MO | Motorway: restricted access major divided highway (i.e. freeway), normally with 2 or   more running lanes plus emergency hard shoulder |
@@ -175,6 +179,7 @@ Secondary road: `RDN+SE`
 |  | RLW+TR | Tram:   one or two carriage rail vehicles, usually sharing motor road. |
 |  | RLW | Unknown:   no additional information concerning rail typology. |
 
+</div>
 <br/>
 
 ####Pipelines
@@ -183,6 +188,8 @@ The taxonomy presented herein has been developed using the classification experi
 The taxonomy string is simply `PPL/CONTENT/POSITION/MATERIAL/JOINT_TYPE/SOIL_TYPE/DIAMETER`, e.g.
 
 Large elevated pipe for potable water: `CPW/PEL/DLG`
+
+<div class="scrollbar table-scroll" markdown="1">
 
 | Attribute | Code | Description |
 |-|:-:|-|
@@ -228,6 +235,7 @@ Large elevated pipe for potable water: `CPW/PEL/DLG`
 |  | DLG  | Large (≥ 40 cm) |
 |  | --  | Unknown diameter |
 
+</div>
 <br/>
 
 ####Energy generation and power grid
@@ -235,6 +243,8 @@ Large elevated pipe for potable water: `CPW/PEL/DLG`
 We follow the taxonomy adopted by HAZUS, which allows capturing the capacity (e.g. voltage) of the elements. For the purposes of assessing damage due to natural disasters, it is also relevant to identify the presence of anchorage and  whether the elements have been designed according to a particular code. The taxonomy for component of the power grid can thus be presented in the following manner: `PWG/ENERGYSOURCE/COMPONENT/ANCHORAGE/CODE PROVISIONS`, e.g.
 
 Electric ditribution line through pylones: `PWG/SSM/ANC`
+
+<div class="scrollbar table-scroll" markdown="1">
 
 | Attribute | Code | Description |
 |-|:-:|-|
@@ -265,6 +275,7 @@ Electric ditribution line through pylones: `PWG/SSM/ANC`
 |  | CDH  | High code |
 |  | C99  | Code provisions unknown |
 
+</div>
 <br/>
 
 ####Potable water and wastewater systems
@@ -275,6 +286,8 @@ pipelines. Our classification is based on the HAZUS guidelines.
 The alphanumeric taxonomy strings are:<br>
 `PWR/COMPONENT/ANCHORAGE/CODE PROVISIONS` for potable water<br>
 `WWR/COMPONENT/ANCHORAGE/CODE PROVISIONS` for wasterwater
+
+<div class="scrollbar table-scroll" markdown="1">
 
 | Attribute | Code | Description |
 |-|:-:|-|
@@ -309,6 +322,7 @@ The alphanumeric taxonomy strings are:<br>
 |  | CDH  | High code |
 |  | --  | Code provisions unknown |
 
+</div>
 <br>
 
 ####Communication systems
@@ -341,6 +355,8 @@ A communication system is comprised by offices dedicated to the reception and di
 The taxonomy for crops, livestock and forestry was defined based on existing classification systems supported by the Food and Agriculture Organization (FAO). For crops, the classification system in the 2000 agricultural census programme was adopted. This system comprises a wide range of attributes such as growing cycle (temporary/permanent), crop species, crop variety, season, land type, amongst others. The taxonomy proposed herein uses the first and second categorization levels proposed by FAO, as well as the growing cycle (e.g. permanent or temporary). A simple alphanumeric code is attributed to each class of crop.
 
 ####Crops
+
+<div class="scrollbar table-scroll" markdown="1">
 
 | Attribute | Code | Description |
 |-|:-:|-|
@@ -398,9 +414,11 @@ The taxonomy for crops, livestock and forestry was defined based on existing cla
 |  | CRP9+7 | Other |
 | Unknown   crop | CRP |   |
 
+</div>
 <br>
 ####Livestock
 
+<div class="scrollbar table-scroll" markdown="1">
 | Attribute | Code | Description |
 |-|:-:|-|
 | Large ruminants  | LVS1+1 | Cattle |
@@ -432,8 +450,11 @@ The taxonomy for crops, livestock and forestry was defined based on existing cla
 |  | LVS8+3 | Other worms or insects |
 | Unknown livestock |  |  |
 
+</div>
 <br>
 ####Forestry
+
+<div class="scrollbar table-scroll" markdown="1">
 
 | Attribute | Code | Description |
 |-|:-:|-|
@@ -457,6 +478,7 @@ The taxonomy for crops, livestock and forestry was defined based on existing cla
 |  | FRT5+4 | Forb vegetation - the plant community if mostly composed by forbs (more than 50%). (e.g. Sonoran Desert) |
 |  | FRT5+5 | Hydromorphic fresh-water vegetation - mostly composed by aquatic plants that are structurally supported by water, in wet or flooded regions most of the year (e.g. Amazon Basin) |
 
+</div>
 <br>
 
 ###Socio-Economic indicators
@@ -473,6 +495,8 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 - [Infrastructure](#infrastructure): Transportation and communication infrastructure, status and access to utility lifelines
 
 ####Population 
+
+<div class="scrollbar table-scroll" markdown="1">
 
 | Attribute | Code | Description |
 |-|:-:|-|
@@ -496,8 +520,11 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 |  | POPVNPASE  | Population over 65 |
 |  | POPVNPTPP  | Refugees (country of origin) |
 
+</div>
 <br>
 ####Economy
+
+<div class="scrollbar table-scroll" markdown="1">
 
 | Attribute | Code | Description |
 |-|:-:|-|
@@ -592,8 +619,11 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 |  | ECOTREEEE  | Merchandise exports FOB |
 |  | ECOTRECPT  | Container port traffic (TEU: 20 foot equivalent units) |
 
+</div>
 <br>
 ####Education
+
+<div class="scrollbar table-scroll" markdown="1">
 
 | Attribute | Code | Description |
 |-|:-:|-|
@@ -616,8 +646,12 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 |  | EDUEACEPG  | Gross enrollment ratio, primary |
 |  | EDUEACCPT  | Children out of school, primary |
 
+</div>
+
 <br>
 ####Environment
+
+<div class="scrollbar table-scroll" markdown="1">
 
 | Attribute | Code | Description |
 |-|:-:|-|
@@ -645,6 +679,7 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 |  | GICLRVSLR  | Strength of legal rights index |
 |  | GICPSCROL  | Rule of Law |
 
+</div>
 <br>
 ####Governance  
 
@@ -660,6 +695,8 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 
 <br>
 ####Health
+
+<div class="scrollbar table-scroll" markdown="1">
 
 | Attribute | Code | Description |
 |-|:-:|-|
@@ -688,8 +725,11 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 |  | HEAHCRNMW  | Nurses and midwives |
 |  | HEAHCRPHY  | Physicians |
 
+</div>
 <br>
 ####Index
+
+<div class="scrollbar table-scroll" markdown="1">
 
 | Code | Description |
 |:-:|-|
@@ -705,9 +745,11 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 | INXXXXDRI  | Disaster Risk Index |
 | INXLPICQL  | Logistics performance index: Competence and quality of logistics services |
 
+</div>
 <br>
 ####Infrastructure
 
+<div class="scrollbar table-scroll" markdown="1">
 | Attribute | Code | Description |
 |-|:-:|-|
 | Energy, Water and Sanitation  | INFEWSNGC  | Natural gas - consumption |
@@ -734,4 +776,5 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 |  | INFTCOMCC  | Mobile cellular subscriptions |
 |  | INFTCORWG  | Railways, goods transported |
 
+</div>
 <br>

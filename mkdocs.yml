@@ -18,7 +18,8 @@ nav:
     - 'Exposure': 'exposure.md'
     - 'Vulnerability': 'vulnerability.md'
     - 'Loss': 'loss.md'
-    - 'Implementation': 'implementation.md'
+- Implementation:
+    - 'implementation.md'
 - Tutorials:
     - 'Deploy RDL': 'deploy.md'
     - 'Prepare data': 'data-preparation.md'
@@ -37,3 +38,6 @@ extra_css:
 plugins:
   - search
   - bootstrap-tables
+
+markdown_extensions:
+    - md_in_html
