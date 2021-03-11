@@ -1,10 +1,6 @@
 # Hazard
+## Schema attributes
 The hazard schema stores data about the intensity and occurrance probability of physical hazard phenomena such as floods, eartquakes, wildfires or others. The specific hazard process can be defined and measured with a specific intensity unit. For example, earthquake hazard may be represented as ground shaking, liquefaction or ground displacement.
-
-Hazard data are most often represented by geospatial grids (raster).
-
-Some figures as data example?
-[ex_hazards1] [ex_hazards2] [ex_hazards3]
 
 The schema specifies which type of analysis and data methodology that has generated the dataset. It supports either simulated probabilistic scenarios and empirical observations. If the dataset has been produced for a specific location, such a city, the name of the location can be included.
 
@@ -15,7 +11,7 @@ The schema specifies which type of analysis and data methodology that has genera
 |*| Calculation method | The methodology used for the modelling of hazard | <ul><li>Simulated<li>Observed<li>Inferred |
 || Geographic area | Specific location for which the dataset has been developed | Name of location |
 
-<br>When the scenario modelled refers to a specific period of time, this can be specified in terms of dates, period span and reference year. For example, an observed flood event that occurred from 1.10.2009 (time start) to 3.10.2009 (time end), spanning over 3 days (time span). When precise time collocation is unknow or inappkicabile, a general reference date such as "2009" is used to identify events (time year). This is also useful to specify future scenario, e.g. time year: 2050.
+<br>When the scenario modelled refers to a specific period of time, this can be specified in terms of dates, period span and reference year. For example, an observed flood event that occurred from 1.10.2009 (time start) to 3.10.2009 (time end), spanning over 3 days (time span). When precise time collocation is unknow or inapplicabile, a general reference date such as "2009" is used to identify events (time year). This is also useful to specify future scenario, e.g. time year: 2050.
 
 |**Required**| **Attribute** | **Description** | **Type** |
 |:---:| --- | --- | --- |
@@ -50,11 +46,51 @@ The schema specifies which type of analysis and data methodology that has genera
 || Description | Provides additional information about a specific event | Text |
 || Data uncertainty | The typology of uncertainty, if considered | Text |
 
+<br>Below is the list of all hazards and related process types:
+
+<div class="scrollbar table-scroll" markdown="1">
+
+| **Hazard type** | **Process type** |
+|---|---|
+| Coastal Flood | Coastal Flood |
+| Coastal Flood | Storm Surge |
+| Convective Storm | Tornado |
+| Drought | Agricultural Drought |
+| Drought | Hydrological Drought |
+| Drought | Meteorological Drought |
+| Drought | Socio-economic Drought |
+| Earthquake | Primary Rupture |
+| Earthquake | Secondary Rupture |
+| Earthquake | Ground Motion |
+| Earthquake | EQ | Liquefaction |
+| Extreme Temperature | Extreme cold |
+| Extreme Temperature | Extreme heat |
+| Flood | Fluvial Flood |
+| Flood | Pluvial Flood |
+| Landslide | Landslide |
+| Landslide | Snow Avalanche |
+| Tsunami | Tsunami |
+| Volcanic | Ashfall |
+| Volcanic | Ballistics |
+| Volcanic | Proximal hazards |
+| Volcanic | Lahar |
+| Volcanic | Lava |
+| Volcanic | Pyroclastic Flow |
+| Wildfire | Wildfire |
+| Wildfire | Extratropical cyclone |
+| Wildfire | Tropical cyclone |
+
+</div>
+
 <br><hr>
 
 ##Examples
 
-Schema attributes for flood hazard maps related to occurrance probability of a river flood event of once in 100 years over Kabul, Afghanistan. The hydrological data used for modelling the intensity of floods is derived from observations over the period 1958-2001 (44 years). The intensity of hazard is measured as water depth in meters. These information cover all mandatory fields, and few optional fields.
+Hazard data are most often represented by geospatial grids (raster); sometimes they are represented by points or polygons.
+
+###Flood hazard maps for Kabul
+
+Schema attributes for flood hazard map related to occurrance probability of a river flood event with a return period of once in 100 years over Kabul, Afghanistan. The hydrological data used for modelling the intensity of floods is derived from observations over the period 1958-2001 (44 years). The hazard intensity is measured as water depth, in meters. These information cover all mandatory fields, and few optional fields.
 
 ![Screenshot](img/hzd_fl_kabul.jpg)
 
@@ -65,14 +101,36 @@ Schema attributes for flood hazard maps related to occurrance probability of a r
 |*| Calculation method | Simulated |
 || Geographic area | Kabul |
 || Frequency type | Return Period |
-|| Occurrance probability | 10 years |
+|| Occurrance probability | 100 years |
 || Occurence time (start) | 1958 |
 || Occurence time (end) | 2001 |
 || Occurence time (span) | 44 years |
 |*| Hazard process | River flood |
 |*| Unit of measure | Water depth (m) |
 
+<br>
 
+###Earthquake hazard maps for Afghanistan
+Schema attributes for earthquake hazard map related to occurrance probability of an event with return period of  once in 1000 years over Afghanistan. The seismic data catalogue behind the calculation of occurrance probability start from year 800, covering a period of 1200 years. The hazard intensity is measured as Peak Ground Acceleration, expressed in (g).
+
+![Screenshot](img/hzd_eq_afg.jpg)
+
+|**Required**| **Attribute** | **Example** |
+|:---:| --- | --- |
+|*| Hazard type | Earthquake |
+|*| Analysis type | Probabilistic |
+|*| Calculation method | Simulated |
+|| Frequency type | Return Period |
+|| Occurrance probability | 1000 years |
+|| Occurence time (start) | 800 |
+|| Occurence time (end) | 2001 |
+|| Occurence time (span) | 1200 years |
+|*| Hazard process | Ground motion |
+|*| Unit of measure | PGA (m) |
+
+
+<br><hr>
+<br><hr>
 <br><hr>
 
 ## Previous version (<a href="https://github.com/GFDRR/rdl-doc/issues/6">as in the GH issue</a>)
@@ -105,6 +163,9 @@ The _**Event set**_ stores one or more scenarios for a specific hazard. The main
 || data\_uncertainty | This attribute describes the typology of uncertainty | _Min to Max range_ |
 
 <br><hr>
+<br><hr>
+<br><hr>
+
 ##Original version (<a href="https://github.com/GFDRR/rdl-doc">as from the other repo</a>)
 The data structure contains entities nested as follows:
 
