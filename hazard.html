@@ -287,6 +287,19 @@
 <td>The process type that triggered the event (if any)</td>
 <td>Process type</td>
 </tr>
+</tbody>
+</table>
+<p>The hazard dataset could include one or more footprints for the same event, where each is one possible realisation (i.e. one footprint could represent minimum, another footprint the average and another one the maximum). The event uncertainty can be represented explicitly, through the inclusion of multiple footprints per event.</p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Required</strong></th>
+<th scope="col"><strong>Attribute</strong></th>
+<th scope="col"><strong>Description</strong></th>
+<th scope="col"><strong>Type</strong></th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td align="center">*</td>
 <td>Hazard process</td>
@@ -307,7 +320,7 @@
 </tr>
 <tr>
 <td align="center"></td>
-<td>data_uncertainty</td>
+<td>Data uncertainty</td>
 <td>The typology of uncertainty, if considered</td>
 <td>Text</td>
 </tr>
