@@ -69,6 +69,26 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="hazard.html">Hazard</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#previous-version-as-in-the-gh-issue">Previous version (as in the GH issue)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#original-version-as-from-the-other-repo">Original version (as from the other repo)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#table-hazardevent_set">Table: hazard.event_set</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#table-hazardevent">Table: hazard.event</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#table-hazardfootprint_set">Table: hazard.footprint_set</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#table-hazardfootprint">Table: hazard.footprint</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#table-hazardfootprint_data">Table: hazard.footprint_data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#types">Types</a>
+    </li>
+        </ul>
+    </li>
     </ul>
                     </li>
                     <li class="toctree-l1"><a class="reference internal" href="exposure.html">Exposure</a>
@@ -142,7 +162,7 @@
           <div role="main">
             <div class="section">
               
-                <h2 id="hazard">Hazard</h2>
+                <h1 id="hazard">Hazard</h1>
 <p>The hazard schema stores data about the intensity and occurrance probability of physical hazard phenomena such as floods, eartquakes, wildfires or others. The specific hazard process can be defined and measured with a specific intensity unit. For example, earthquake hazard may be represented as ground shaking, liquefaction or ground displacement.</p>
 <p>Hazard data are most often represented by geospatial grids (raster).</p>
 <p>Some figures as data example?
@@ -323,6 +343,76 @@
 <td>Data uncertainty</td>
 <td>The typology of uncertainty, if considered</td>
 <td>Text</td>
+</tr>
+</tbody>
+</table>
+<p><br><hr></p>
+<h2 id="examples">Examples</h2>
+<p>Schema attributes for flood hazard maps related to occurrance probability of a river flood event of once in 100 years over Kabul, Afghanistan. The hydrological data used for modelling the intensity of floods is derived from observations over the period 1958-2001 (44 years). The intensity of hazard is measured as water depth in meters. These information cover all mandatory fields, and few optional fields.</p>
+<p><img alt="Screenshot" src="img/hzd_fl_kabul.jpg" /></p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Required</strong></th>
+<th scope="col"><strong>Attribute</strong></th>
+<th scope="col"><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">*</td>
+<td>Hazard type</td>
+<td>Flood</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Analysis type</td>
+<td>Probabilistic</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Calculation method</td>
+<td>Simulated</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Geographic area</td>
+<td>Kabul</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Frequency type</td>
+<td>Return Period</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Occurrance probability</td>
+<td>10 years</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Occurence time (start)</td>
+<td>1958</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Occurence time (end)</td>
+<td>2001</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Occurence time (span)</td>
+<td>44 years</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Hazard process</td>
+<td>River flood</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Unit of measure</td>
+<td>Water depth (m)</td>
 </tr>
 </tbody>
 </table>
