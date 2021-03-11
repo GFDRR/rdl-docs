@@ -70,6 +70,12 @@
                     <li class="toctree-l1 current"><a class="reference internal current" href="hazard.html">Hazard</a>
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#flood-hazard-maps-for-kabul">Flood hazard maps for Kabul</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#earthquake-hazard-maps-for-afghanistan">Earthquake hazard maps for Afghanistan</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#previous-version-as-in-the-gh-issue">Previous version (as in the GH issue)</a>
     </li>
@@ -164,9 +170,6 @@
               
                 <h1 id="hazard">Hazard</h1>
 <p>The hazard schema stores data about the intensity and occurrance probability of physical hazard phenomena such as floods, eartquakes, wildfires or others. The specific hazard process can be defined and measured with a specific intensity unit. For example, earthquake hazard may be represented as ground shaking, liquefaction or ground displacement.</p>
-<p>Hazard data are most often represented by geospatial grids (raster).</p>
-<p>Some figures as data example?
-[ex_hazards1] [ex_hazards2] [ex_hazards3]</p>
 <p>The schema specifies which type of analysis and data methodology that has generated the dataset. It supports either simulated probabilistic scenarios and empirical observations. If the dataset has been produced for a specific location, such a city, the name of the location can be included.</p>
 <table class="table">
 <thead>
@@ -346,9 +349,132 @@
 </tr>
 </tbody>
 </table>
+<p><br>Below is the list of all hazards and related process types:</p>
+<div class="scrollbar table-scroll">
+<table class="table">
+<thead>
+<tr>
+<th scope="col"><strong>Hazard type</strong></th>
+<th scope="col"><strong>Process type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coastal Flood</td>
+<td>Coastal Flood</td>
+</tr>
+<tr>
+<td>Coastal Flood</td>
+<td>Storm Surge</td>
+</tr>
+<tr>
+<td>Convective Storm</td>
+<td>Tornado</td>
+</tr>
+<tr>
+<td>Drought</td>
+<td>Agricultural Drought</td>
+</tr>
+<tr>
+<td>Drought</td>
+<td>Hydrological Drought</td>
+</tr>
+<tr>
+<td>Drought</td>
+<td>Meteorological Drought</td>
+</tr>
+<tr>
+<td>Drought</td>
+<td>Socio-economic Drought</td>
+</tr>
+<tr>
+<td>Earthquake</td>
+<td>Primary Rupture</td>
+</tr>
+<tr>
+<td>Earthquake</td>
+<td>Secondary Rupture</td>
+</tr>
+<tr>
+<td>Earthquake</td>
+<td>Ground Motion</td>
+</tr>
+<tr>
+<td>Earthquake</td>
+<td>EQ</td>
+</tr>
+<tr>
+<td>Extreme Temperature</td>
+<td>Extreme cold</td>
+</tr>
+<tr>
+<td>Extreme Temperature</td>
+<td>Extreme heat</td>
+</tr>
+<tr>
+<td>Flood</td>
+<td>Fluvial Flood</td>
+</tr>
+<tr>
+<td>Flood</td>
+<td>Pluvial Flood</td>
+</tr>
+<tr>
+<td>Landslide</td>
+<td>Landslide</td>
+</tr>
+<tr>
+<td>Landslide</td>
+<td>Snow Avalanche</td>
+</tr>
+<tr>
+<td>Tsunami</td>
+<td>Tsunami</td>
+</tr>
+<tr>
+<td>Volcanic</td>
+<td>Ashfall</td>
+</tr>
+<tr>
+<td>Volcanic</td>
+<td>Ballistics</td>
+</tr>
+<tr>
+<td>Volcanic</td>
+<td>Proximal hazards</td>
+</tr>
+<tr>
+<td>Volcanic</td>
+<td>Lahar</td>
+</tr>
+<tr>
+<td>Volcanic</td>
+<td>Lava</td>
+</tr>
+<tr>
+<td>Volcanic</td>
+<td>Pyroclastic Flow</td>
+</tr>
+<tr>
+<td>Wildfire</td>
+<td>Wildfire</td>
+</tr>
+<tr>
+<td>Wildfire</td>
+<td>Extratropical cyclone</td>
+</tr>
+<tr>
+<td>Wildfire</td>
+<td>Tropical cyclone</td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><br><hr></p>
 <h2 id="examples">Examples</h2>
-<p>Schema attributes for flood hazard maps related to occurrance probability of a river flood event of once in 100 years over Kabul, Afghanistan. The hydrological data used for modelling the intensity of floods is derived from observations over the period 1958-2001 (44 years). The intensity of hazard is measured as water depth in meters. These information cover all mandatory fields, and few optional fields.</p>
+<p>Hazard data are most often represented by geospatial grids (raster); sometimes they are represented by points or polygons.</p>
+<h3 id="flood-hazard-maps-for-kabul">Flood hazard maps for Kabul</h3>
+<p>Schema attributes for flood hazard map related to occurrance probability of a river flood event with a return period of once in 100 years over Kabul, Afghanistan. The hydrological data used for modelling the intensity of floods is derived from observations over the period 1958-2001 (44 years). The hazard intensity is measured as water depth, in meters. These information cover all mandatory fields, and few optional fields.</p>
 <p><img alt="Screenshot" src="img/hzd_fl_kabul.jpg" /></p>
 <table class="table">
 <thead>
@@ -387,7 +513,7 @@
 <tr>
 <td align="center"></td>
 <td>Occurrance probability</td>
-<td>10 years</td>
+<td>100 years</td>
 </tr>
 <tr>
 <td align="center"></td>
@@ -413,6 +539,71 @@
 <td align="center">*</td>
 <td>Unit of measure</td>
 <td>Water depth (m)</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<h3 id="earthquake-hazard-maps-for-afghanistan">Earthquake hazard maps for Afghanistan</h3>
+<p>Schema attributes for earthquake hazard map related to occurrance probability of an event with return period of  once in 1000 years over Afghanistan. The seismic data catalogue behind the calculation of occurrance probability start from year 800, covering a period of 1200 years. The hazard intensity is measured as Peak Ground Acceleration, expressed in (g).</p>
+<p><img alt="Screenshot" src="img/hzd_eq_afg.jpg" /></p>
+<table class="table">
+<thead>
+<tr>
+<th align="center"><strong>Required</strong></th>
+<th scope="col"><strong>Attribute</strong></th>
+<th scope="col"><strong>Example</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">*</td>
+<td>Hazard type</td>
+<td>Earthquake</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Analysis type</td>
+<td>Probabilistic</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Calculation method</td>
+<td>Simulated</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Frequency type</td>
+<td>Return Period</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Occurrance probability</td>
+<td>1000 years</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Occurence time (start)</td>
+<td>800</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Occurence time (end)</td>
+<td>2001</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td>Occurence time (span)</td>
+<td>1200 years</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Hazard process</td>
+<td>Ground motion</td>
+</tr>
+<tr>
+<td align="center">*</td>
+<td>Unit of measure</td>
+<td>PGA (m)</td>
 </tr>
 </tbody>
 </table>
