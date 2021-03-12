@@ -38,6 +38,7 @@ extra_css:
 plugins:
   - search
   - bootstrap-tables
+  - mermaid2
 
 markdown_extensions:
     - md_in_html

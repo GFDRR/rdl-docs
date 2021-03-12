@@ -2,6 +2,46 @@
 ## Schema attributes
 The hazard schema stores data about the intensity and occurrance probability of physical hazard phenomena such as floods, eartquakes, wildfires or others. The specific hazard process can be defined and measured with a specific intensity unit. For example, earthquake hazard may be represented as ground shaking, liquefaction or ground displacement.
 
+```mermaid
+classDiagram
+    Event set <|-- Event1
+    Event set <|-- Event2
+    Event set: Hazard type
+    Event set: Analytical method
+    class Event1{
+      Occurrance frequency
+      Hazard trigger
+    }
+    class Event2{
+      Occurrance frequency
+      Hazard trigger
+    }
+    Event1 <|-- Footprint1
+    Event1 <|-- Footprint2
+    Event2 <|-- Footprint3
+    Event2 <|-- Footprint4
+    class Footprint1{
+      Hazard process
+      Intensity measure
+      Uncertainty
+    }
+    class Footprint2{
+      Hazard process
+      Intensity measure
+      Uncertainty
+    }
+    class Footprint3{
+      Hazard process
+      Intensity measure
+      Uncertainty
+    }
+    class Footprint4{
+      Hazard process
+      Intensity measure
+      Uncertainty
+    }
+```
+<br>
 The schema specifies which type of analysis and data methodology that has generated the dataset. It supports either simulated probabilistic scenarios and empirical observations. If the dataset has been produced for a specific location, such a city, the name of the location can be included.
 
 |**Required**| **Attribute** | **Description** | **Type** |
@@ -126,7 +166,7 @@ Schema attributes for earthquake hazard map related to occurrance probability of
 || Occurence time (end) | 2001 |
 || Occurence time (span) | 1200 years |
 |*| Hazard process | Ground motion |
-|*| Unit of measure | PGA (m) |
+|*| Unit of measure | PGA (g) |
 
 
 <br><hr>

@@ -8,7 +8,7 @@ Suggest having an overview page, plus one page for taxonomy. For each taxonomy p
  - a CSV download of the vocabulary (and possibly other formats in future)
  - any notes about mapping to/from other taxonomies to help people use them
 
-
+<br><hr>
 
 ##GED4all exposure taxonomy
 The exposure schema can accomodate different descriptions of assets using a taxonomy which describes their characteristics (e.g. building occupancy, construction, age, height, etc. or road surface type). The taxonomy being applied to a dataset is defined in _ged4all.exposure\_model.taxonomy\_source_. The taxonomy string, which describes all the characteristics of the asset (or group of assets of the same type), is defined at _ged4all.asset.taxonomy_. <br>We encourage the use of GED4all taxonomy, described in full [here](https://wiki.openstreetmap.org/wiki/GED4ALL).<br>
@@ -778,3 +778,5 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 
 </div>
 <br>
+
+<br><hr>
