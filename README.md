@@ -15,6 +15,7 @@
 - install mkdocs: "pip install mkdocs"
 - install mkdocs themes plugin: "pip install mkdocs-bootstrap"
 - install mkdocs table plugin: "pip install mkdocs-bootstrap-tables-plugin"
+- install mkdocs mermaid2 plugin: "pip install mkdocs-mermaid2-plugin"
 
 ## Editing the documentation
 - The content of pages is located in docs/*.md markdown files 
