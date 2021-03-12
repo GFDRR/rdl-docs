@@ -10,10 +10,12 @@ classDiagram
     Event set: Analytical method
     class Event1{
       Occurrance frequency
+      Time reference
       Hazard trigger
     }
     class Event2{
       Occurrance frequency
+      Time reference
       Hazard trigger
     }
     Event1 <|-- Footprint1
