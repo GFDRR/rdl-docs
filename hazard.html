@@ -147,7 +147,46 @@
 <h1 id="hazard">Hazard</h1>
 <h2 id="schema-attributes">Schema attributes</h2>
 <p>The hazard schema stores data about the intensity and occurrance probability of physical hazard phenomena such as floods, eartquakes, wildfires or others. The specific hazard process can be defined and measured with a specific intensity unit. For example, earthquake hazard may be represented as ground shaking, liquefaction or ground displacement.</p>
-<p>The schema specifies which type of analysis and data methodology that has generated the dataset. It supports either simulated probabilistic scenarios and empirical observations. If the dataset has been produced for a specific location, such a city, the name of the location can be included.</p>
+<div class="mermaid">classDiagram
+    Event set &lt;|-- Event1
+    Event set &lt;|-- Event2
+    Event set: Hazard type
+    Event set: Analytical method
+    class Event1{
+      Occurrance frequency
+      Hazard trigger
+    }
+    class Event2{
+      Occurrance frequency
+      Hazard trigger
+    }
+    Event1 &lt;|-- Footprint1
+    Event1 &lt;|-- Footprint2
+    Event2 &lt;|-- Footprint3
+    Event2 &lt;|-- Footprint4
+    class Footprint1{
+      Hazard process
+      Intensity measure
+      Uncertainty
+    }
+    class Footprint2{
+      Hazard process
+      Intensity measure
+      Uncertainty
+    }
+    class Footprint3{
+      Hazard process
+      Intensity measure
+      Uncertainty
+    }
+    class Footprint4{
+      Hazard process
+      Intensity measure
+      Uncertainty
+    }
+</div>
+<p><br/>
+The schema specifies which type of analysis and data methodology that has generated the dataset. It supports either simulated probabilistic scenarios and empirical observations. If the dataset has been produced for a specific location, such a city, the name of the location can be included.</p>
 <table class="table">
 <thead>
 <tr>
@@ -1103,5 +1142,5 @@ The uncertainty of a particular event is captured either by the construction of 
             SphinxRtdTheme.Navigation.enable(true);
         };
     </script>
-</body>
+<script src="https://unpkg.com/mermaid@8.8.0/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
 </html>
