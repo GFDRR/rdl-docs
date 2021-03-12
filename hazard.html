@@ -1,176 +1,150 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="canonical" href="http://riskdatalibrary.org/hazard.html">
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Hazard - Risk Data Library docs</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  <link href="css/extra.css" rel="stylesheet" />
-  
-  <script>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="http://riskdatalibrary.org/hazard.html" rel="canonical"/>
+<link href="img/favicon.ico" rel="shortcut icon"/>
+<title>Hazard - Risk Data Library docs</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet">
+<link href="css/theme.css" rel="stylesheet">
+<link href="css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet"/>
+<link href="css/extra.css" rel="stylesheet"/>
+<script>
     // Current page data
     var mkdocs_page_name = "Hazard";
     var mkdocs_page_input_path = "hazard.md";
     var mkdocs_page_url = "/hazard.html";
   </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
-
+<script defer="" src="js/jquery-2.1.1.min.js"></script>
+<script defer="" src="js/modernizr-2.8.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</link></link></head>
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Risk Data Library docs</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="."> Risk Data Library docs</a>
+<div role="search">
+<form action="./search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <p class="caption"><span class="caption-text">Risk Data Library</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="index.html">Primer</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="usecases.html">Use cases</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="keyconcepts.html">Key concepts</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="standards.html">Core standards</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="taxonomy.html">Taxonomy</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Data model</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a>
-                    </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="hazard.html">Hazard</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#schema-attributes">Schema attributes</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#flood-hazard-maps-for-kabul">Flood hazard maps for Kabul</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#earthquake-hazard-maps-for-afghanistan">Earthquake hazard maps for Afghanistan</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#previous-version-as-in-the-gh-issue">Previous version (as in the GH issue)</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#original-version-as-from-the-other-repo">Original version (as from the other repo)</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#table-hazardevent_set">Table: hazard.event_set</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#table-hazardevent">Table: hazard.event</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#table-hazardfootprint_set">Table: hazard.footprint_set</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#table-hazardfootprint">Table: hazard.footprint</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#table-hazardfootprint_data">Table: hazard.footprint_data</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#types">Types</a>
-    </li>
-        </ul>
-    </li>
-    </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="exposure.html">Exposure</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="vulnerability.html">Vulnerability</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Implementation</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Tutorials</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy RDL</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="data-preparation.html">Prepare data</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="data-import.html">Publish data</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">About</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="history.html">History</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="governance.html">Governance</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="license.html">License</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Risk Data Library docs</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".">Docs</a> &raquo;</li>
-    
-      
-        
-          <li>Data model &raquo;</li>
-        
-      
-    
-    <li>Hazard</li>
-    <li class="wy-breadcrumbs-aside">
-      
-        <a href="https://github.com/GFDRR/rdl-docs/tree/main/docs/hazard.md"
-          class="icon icon-github"> Edit on GitHub</a>
-      
-    </li>
-  </ul>
-  
-  <hr/>
 </div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="hazard">Hazard</h1>
+<div aria-label="main navigation" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Risk Data Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Primer</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usecases.html">Use cases</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="keyconcepts.html">Key concepts</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standards.html">Core standards</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomy.html">Taxonomy</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Data model</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="hazard.html">Hazard</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#schema-attributes">Schema attributes</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#flood-hazard-maps-for-kabul">Flood hazard maps for Kabul</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#earthquake-hazard-maps-for-afghanistan">Earthquake hazard maps for Afghanistan</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#previous-version-as-in-the-gh-issue">Previous version (as in the GH issue)</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#original-version-as-from-the-other-repo">Original version (as from the other repo)</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#table-hazardevent_set">Table: hazard.event_set</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#table-hazardevent">Table: hazard.event</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#table-hazardfootprint_set">Table: hazard.footprint_set</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#table-hazardfootprint">Table: hazard.footprint</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#table-hazardfootprint_data">Table: hazard.footprint_data</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#types">Types</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exposure.html">Exposure</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vulnerability.html">Vulnerability</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Implementation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy RDL</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-preparation.html">Prepare data</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">Publish data</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="governance.html">Governance</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="top navigation" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href=".">Risk Data Library docs</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a href=".">Docs</a> »</li>
+<li>Data model »</li>
+<li>Hazard</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/GFDRR/rdl-docs/tree/main/docs/hazard.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div role="main">
+<div class="section">
+<h1 id="hazard">Hazard</h1>
 <h2 id="schema-attributes">Schema attributes</h2>
 <p>The hazard schema stores data about the intensity and occurrance probability of physical hazard phenomena such as floods, eartquakes, wildfires or others. The specific hazard process can be defined and measured with a specific intensity unit. For example, earthquake hazard may be represented as ground shaking, liquefaction or ground displacement.</p>
 <p>The schema specifies which type of analysis and data methodology that has generated the dataset. It supports either simulated probabilistic scenarios and empirical observations. If the dataset has been produced for a specific location, such a city, the name of the location can be included.</p>
@@ -188,19 +162,19 @@
 <td align="center">*</td>
 <td>Hazard type</td>
 <td>Main hazard type from list of options</td>
-<td><ul><li>Coastal Flood<li>Convective Storm<li>Drought<li>Earthquake<li>Extreme Temperature<li>Flood<li>Landslide<li>Tsunami<li>Volcanic<li>Wildfire<li>Strong Wind<li>Multi-Hazard</ul></td>
+<td><ul><li>Coastal Flood<li>Convective Storm<li>Drought<li>Earthquake<li>Extreme Temperature<li>Flood<li>Landslide<li>Tsunami<li>Volcanic<li>Wildfire<li>Strong Wind<li>Multi-Hazard</li></li></li></li></li></li></li></li></li></li></li></li></ul></td>
 </tr>
 <tr>
 <td align="center">*</td>
 <td>Analysis type</td>
 <td>Type of analysis that generated the data</td>
-<td><ul><li>Deterministic<li>Probabilistic</td>
+<td><ul><li>Deterministic<li>Probabilistic</li></li></ul></td>
 </tr>
 <tr>
 <td align="center">*</td>
 <td>Calculation method</td>
 <td>The methodology used for the modelling of hazard</td>
-<td><ul><li>Simulated<li>Observed<li>Inferred</td>
+<td><ul><li>Simulated<li>Observed<li>Inferred</li></li></li></ul></td>
 </tr>
 <tr>
 <td align="center"></td>
@@ -210,7 +184,7 @@
 </tr>
 </tbody>
 </table>
-<p><br>When the scenario modelled refers to a specific period of time, this can be specified in terms of dates, period span and reference year. For example, an observed flood event that occurred from 1.10.2009 (time start) to 3.10.2009 (time end), spanning over 3 days (time span). When precise time collocation is unknow or inapplicabile, a general reference date such as "2009" is used to identify events (time year). This is also useful to specify future scenario, e.g. time year: 2050.</p>
+<p><br/>When the scenario modelled refers to a specific period of time, this can be specified in terms of dates, period span and reference year. For example, an observed flood event that occurred from 1.10.2009 (time start) to 3.10.2009 (time end), spanning over 3 days (time span). When precise time collocation is unknow or inapplicabile, a general reference date such as "2009" is used to identify events (time year). This is also useful to specify future scenario, e.g. time year: 2050.</p>
 <table class="table">
 <thead>
 <tr>
@@ -247,7 +221,7 @@
 </tr>
 </tbody>
 </table>
-<p><br>When the hazard scenario is represented in probabilistic terms, the occurrance probability (frequency distribution) of hazard can be expressed in different ways. The most common way to communicate this is the "return period", expressed as the number of years after which a given hazard intensity could occurr again: RP 100 indicates that that event has a probability of once in 100 years. This attirbute can indicate individual layer frequency (RP100) or a range of frequencies for a collection of layers (RP10-100) The probability of occurrance is usually calculated on the basis of a reference period that provides observations: this period can be specified by start date, end date and time span. For example, an analysis of eartquake frequency based on seismic observations from 1934 (occurrance time start) to 2001 (occurrance time end), for a total count of 66 years (occurrance time span).</p>
+<p><br/>When the hazard scenario is represented in probabilistic terms, the occurrance probability (frequency distribution) of hazard can be expressed in different ways. The most common way to communicate this is the "return period", expressed as the number of years after which a given hazard intensity could occurr again: RP 100 indicates that that event has a probability of once in 100 years. This attirbute can indicate individual layer frequency (RP100) or a range of frequencies for a collection of layers (RP10-100) The probability of occurrance is usually calculated on the basis of a reference period that provides observations: this period can be specified by start date, end date and time span. For example, an analysis of eartquake frequency based on seismic observations from 1934 (occurrance time start) to 2001 (occurrance time end), for a total count of 66 years (occurrance time span).</p>
 <table class="table">
 <thead>
 <tr>
@@ -262,7 +236,7 @@
 <td align="center"></td>
 <td>Frequency type</td>
 <td>The frequency of occurrence of the present event</td>
-<td><ul><li>Rate of Exceedence<li>Probability of Exceedence<li>Return Period</ul></td>
+<td><ul><li>Rate of Exceedence<li>Probability of Exceedence<li>Return Period</li></li></li></ul></td>
 </tr>
 <tr>
 <td align="center"></td>
@@ -290,7 +264,7 @@
 </tr>
 </tbody>
 </table>
-<p><br>The schema distinguish between the hazard and process represented and the hazard and process identified as the cause, or concause for the manifestation of the represented hazard. For example, a dataset represent landslide hazard that is triggered by an earthquake will have Hazard type: Landslide; Trigger hazard type: Earthquake. The unit of measure refers to the represented hazard and process. A description can be added to cover additional information not included in the schema.</p>
+<p><br/>The schema distinguish between the hazard and process represented and the hazard and process identified as the cause, or concause for the manifestation of the represented hazard. For example, a dataset represent landslide hazard that is triggered by an earthquake will have Hazard type: Landslide; Trigger hazard type: Earthquake. The unit of measure refers to the represented hazard and process. A description can be added to cover additional information not included in the schema.</p>
 <table class="table">
 <thead>
 <tr>
@@ -315,7 +289,7 @@
 </tr>
 </tbody>
 </table>
-<p><br>The hazard dataset could include one or more footprints for the same event, where each is one possible realisation (i.e. one footprint could represent minimum, another footprint the average and another one the maximum). The event uncertainty can be represented explicitly, through the inclusion of multiple footprints per event.</p>
+<p><br/>The hazard dataset could include one or more footprints for the same event, where each is one possible realisation (i.e. one footprint could represent minimum, another footprint the average and another one the maximum). The event uncertainty can be represented explicitly, through the inclusion of multiple footprints per event.</p>
 <table class="table">
 <thead>
 <tr>
@@ -352,7 +326,7 @@
 </tr>
 </tbody>
 </table>
-<p><br>Below is the list of all hazards and related process types:</p>
+<p><br/>Below is the list of all hazards and related process types:</p>
 <div class="scrollbar table-scroll">
 <table class="table">
 <thead>
@@ -473,12 +447,12 @@
 </tbody>
 </table>
 </div>
-<p><br><hr></p>
+<p><br/><hr/></p>
 <h2 id="examples">Examples</h2>
 <p>Hazard data are most often represented by geospatial grids (raster); sometimes they are represented by points or polygons.</p>
 <h3 id="flood-hazard-maps-for-kabul">Flood hazard maps for Kabul</h3>
 <p>Schema attributes for flood hazard map related to occurrance probability of a river flood event with a return period of once in 100 years over Kabul, Afghanistan. The hydrological data used for modelling the intensity of floods is derived from observations over the period 1958-2001 (44 years). The hazard intensity is measured as water depth, in meters. These information cover all mandatory fields, and few optional fields.</p>
-<p><img alt="Screenshot" src="img/hzd_fl_kabul.jpg" /></p>
+<p><img alt="Screenshot" src="img/hzd_fl_kabul.jpg"/></p>
 <table class="table">
 <thead>
 <tr>
@@ -545,10 +519,10 @@
 </tr>
 </tbody>
 </table>
-<p><br></p>
+<p><br/></p>
 <h3 id="earthquake-hazard-maps-for-afghanistan">Earthquake hazard maps for Afghanistan</h3>
 <p>Schema attributes for earthquake hazard map related to occurrance probability of an event with return period of  once in 1000 years over Afghanistan. The seismic data catalogue behind the calculation of occurrance probability start from year 800, covering a period of 1200 years. The hazard intensity is measured as Peak Ground Acceleration, expressed in (g).</p>
-<p><img alt="Screenshot" src="img/hzd_eq_afg.jpg" /></p>
+<p><img alt="Screenshot" src="img/hzd_eq_afg.jpg"/></p>
 <table class="table">
 <thead>
 <tr>
@@ -610,9 +584,9 @@
 </tr>
 </tbody>
 </table>
-<p><br><hr>
-<br><hr>
-<br><hr></p>
+<p><br/><hr/>
+<br/><hr/>
+<br/><hr/></p>
 <h2 id="previous-version-as-in-the-gh-issue">Previous version (<a href="https://github.com/GFDRR/rdl-doc/issues/6">as in the GH issue</a>)</h2>
 <p>The <em><strong>Event set</strong></em> stores one or more scenarios for a specific hazard. The main hazard type is defined by a specific code defined in common tables. Key attributes are:</p>
 <table class="table">
@@ -645,7 +619,7 @@
 </tr>
 </tbody>
 </table>
-<p><br>Each <strong><em>Event</em></strong> is characterised by three main parameters: the methodology which originated the dataset; the specific occurrance probability, or frequency; and the main and secondary trigger processes which comes before the rapresented hazard in the cascade of events, and are identified as cause, or concause for the manifestation of the represented hazard.</p>
+<p><br/>Each <strong><em>Event</em></strong> is characterised by three main parameters: the methodology which originated the dataset; the specific occurrance probability, or frequency; and the main and secondary trigger processes which comes before the rapresented hazard in the cascade of events, and are identified as cause, or concause for the manifestation of the represented hazard.</p>
 <table class="table">
 <thead>
 <tr>
@@ -700,7 +674,7 @@
 </tr>
 </tbody>
 </table>
-<p><br>For each <strong><em>Event</em></strong>, one more <strong><em>Footprint_set</em></strong> can be available, where each is one possible realisation of the event, i.e. one footprint could represent minimum, another footprint the average and another one the maximum. In this way, the event uncertainty can be represented explicitly, through the inclusion of multiple footprints per event. Hazard footprints can be assigned an occurrence frequency, and can represent a scenario footprint or return period hazard map. Inclusion of an event start and end time enables description of long-duration events.</p>
+<p><br/>For each <strong><em>Event</em></strong>, one more <strong><em>Footprint_set</em></strong> can be available, where each is one possible realisation of the event, i.e. one footprint could represent minimum, another footprint the average and another one the maximum. In this way, the event uncertainty can be represented explicitly, through the inclusion of multiple footprints per event. Hazard footprints can be assigned an occurrence frequency, and can represent a scenario footprint or return period hazard map. Inclusion of an event start and end time enables description of long-duration events.</p>
 <table class="table">
 <thead>
 <tr>
@@ -731,24 +705,24 @@
 </tr>
 </tbody>
 </table>
-<p><br><hr>
-<br><hr>
-<br><hr></p>
+<p><br/><hr/>
+<br/><hr/>
+<br/><hr/></p>
 <h2 id="original-version-as-from-the-other-repo">Original version (<a href="https://github.com/GFDRR/rdl-doc">as from the other repo</a>)</h2>
 <p>The data structure contains entities nested as follows:</p>
 <pre><code>Event_set ( Event ( Footprint_set ( Footprint ( Footprint_data) ) ) )
 </code></pre>
-<p>The &quot;Event set&quot; stores one or more scenarios for a specific hazard. 
-One &quot;Event&quot; represents one specific scenario (e.g. RP100, or one historical event). 
-For each Event, one more &quot;Footprint_set&quot; can be available.  This is a container for one or several &quot;Footprints&quot; where each is one possible realisation of an event. 
+<p>The "Event set" stores one or more scenarios for a specific hazard. 
+One "Event" represents one specific scenario (e.g. RP100, or one historical event). 
+For each Event, one more "Footprint_set" can be available.  This is a container for one or several "Footprints" where each is one possible realisation of an event. 
 Uncertainty in the event characteristics and hazard footprint can be represented explicitly, through the inclusion of multiple events in an event set, and many footprints per event. 
-Hazard footprints can be linked to another &#39;trigger event&#39; footprint to represent cascading hazards. 
+Hazard footprints can be linked to another 'trigger event' footprint to represent cascading hazards. 
 Hazard footprints can be assigned an occurrence frequency, and can represent a scenario footprint or return period hazard map. 
 Inclusion of an event start and end time enables description of long-duration events.</p>
-<p><img alt="Screenshot" src="img/hazard.png" />
+<p><img alt="Screenshot" src="img/hazard.png"/>
 ERD (hazard schema): hazard table contents (red) and links to common tables (yellow).</p>
 <h3 id="table-hazardevent_set">Table: <em>hazard.event_set</em></h3>
-<p>The &quot;event.set&quot; entity contains information on a set of events for a given area, with event set duration, description, bibliography and defines the event set as probabilistic or deterministic.</p>
+<p>The "event.set" entity contains information on a set of events for a given area, with event set duration, description, bibliography and defines the event set as probabilistic or deterministic.</p>
 <div class="scrollbar table-scroll">
 <table class="table">
 <thead>
@@ -836,7 +810,7 @@ ERD (hazard schema): hazard table contents (red) and links to common tables (yel
 </div>
 <p><br/></p>
 <h3 id="table-hazardevent">Table: <em>hazard.event</em></h3>
-<p>The &quot;Event&quot; entity contains information about one specific scenario or hazard map included in an &quot;Event Set&quot;. 
+<p>The "Event" entity contains information about one specific scenario or hazard map included in an "Event Set". 
 The information comprises event duration, occurrence probability or frequency, the hazard and process type, a link to a possible triggering event (for cascading events) and a text description for more context about magnitude, for example.</p>
 <div class="scrollbar table-scroll">
 <table class="table">
@@ -939,7 +913,7 @@ The information comprises event duration, occurrence probability or frequency, t
 </div>
 <p><br/></p>
 <h3 id="table-hazardfootprint_set">Table: <em>hazard.footprint_set</em></h3>
-<p>The &quot;Footprint set&quot; entity contains a sub-group of the &quot;Footprints&quot; computed for an &quot;Event&quot;; all the &quot;Footprint&quot; in a &quot;Footprint Set&quot; have the same unit of measure, represent the same process type and their uncertainty is described in a homogenous way. Every &quot;Footprint Set&quot; instance will have the following attributes.</p>
+<p>The "Footprint set" entity contains a sub-group of the "Footprints" computed for an "Event"; all the "Footprint" in a "Footprint Set" have the same unit of measure, represent the same process type and their uncertainty is described in a homogenous way. Every "Footprint Set" instance will have the following attributes.</p>
 <table class="table">
 <thead>
 <tr>
@@ -990,7 +964,7 @@ The information comprises event duration, occurrence probability or frequency, t
 </table>
 <p><br/></p>
 <h3 id="table-hazardfootprint">Table: <em>hazard.footprint</em></h3>
-<p>The &quot;Footprint&quot; entity contains information on a specific realisation of an &quot;Event&quot;. 
+<p>The "Footprint" entity contains information on a specific realisation of an "Event". 
 The uncertainty of a particular event is captured either by the construction of many footprints or by a single footprint which contains information about uncertainty.</p>
 <table class="table">
 <thead>
@@ -1035,7 +1009,7 @@ The uncertainty of a particular event is captured either by the construction of 
 </table>
 <p><br/></p>
 <h3 id="table-hazardfootprint_data">Table: <em>hazard.footprint_data</em></h3>
-<p>The &quot;Footprint_data&quot; entity contains the footprint data: the value of intensity according to the intensity measure (IMT) described in &quot;Footprint set&quot;, and the point location of the intensity value.</p>
+<p>The "Footprint_data" entity contains the footprint data: the value of intensity according to the intensity measure (IMT) described in "Footprint set", and the point location of the intensity value.</p>
 <table class="table">
 <thead>
 <tr>
@@ -1073,7 +1047,7 @@ The uncertainty of a particular event is captured either by the construction of 
 <td>intensity</td>
 <td>FLOAT</td>
 <td></td>
-<td>The hazad process intensity value in the IMT described in &quot;Footprint set&quot;</td>
+<td>The hazad process intensity value in the IMT described in "Footprint set"</td>
 </tr>
 </tbody>
 </table>
@@ -1090,65 +1064,44 @@ The uncertainty of a particular event is captured either by the construction of 
 <tbody>
 <tr>
 <td>calc_method_enum</td>
-<td><ul><li>Inferred<li>Simulated<li>Observed</td>
+<td><ul><li>Inferred<li>Simulated<li>Observed</li></li></li></ul></td>
 <td>Type of calculation method applied to produce hazard footprint.</td>
 </tr>
 </tbody>
 </table>
 <p><br/></p>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="exposure.html" class="btn btn-neutral float-right" title="Exposure">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="overview.html" class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
+</div>
+</div>
+<footer>
+<div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-right" href="exposure.html" title="Exposure">Next <span class="icon icon-circle-arrow-right"></span></a>
+<a class="btn btn-neutral" href="overview.html" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+</div>
+<hr>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-      
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/GFDRR/rdl-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="overview.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="exposure.html" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+</hr></footer>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="js/theme.js" defer></script>
-      <script src="search/main.js" defer></script>
-    <script defer>
+</div>
+</section>
+</div>
+<div aria-label="versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<a class="fa fa-github" href="https://github.com/GFDRR/rdl-docs/" style="float: left; color: #fcfcfc"> GitHub</a>
+<span><a href="overview.html" style="color: #fcfcfc;">« Previous</a></span>
+<span style="margin-left: 15px"><a href="exposure.html" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script>var base_url = '.';</script>
+<script defer="" src="js/theme.js"></script>
+<script defer="" src="search/main.js"></script>
+<script defer="">
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
         };
     </script>
-
 </body>
 </html>

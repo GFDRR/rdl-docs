@@ -1,162 +1,136 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="canonical" href="http://riskdatalibrary.org/exposure.html">
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>Exposure - Risk Data Library docs</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
-  <link href="css/extra.css" rel="stylesheet" />
-  
-  <script>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="http://riskdatalibrary.org/exposure.html" rel="canonical"/>
+<link href="img/favicon.ico" rel="shortcut icon"/>
+<title>Exposure - Risk Data Library docs</title>
+<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" rel="stylesheet">
+<link href="css/theme.css" rel="stylesheet">
+<link href="css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet"/>
+<link href="css/extra.css" rel="stylesheet"/>
+<script>
     // Current page data
     var mkdocs_page_name = "Exposure";
     var mkdocs_page_input_path = "exposure.md";
     var mkdocs_page_url = "/exposure.html";
   </script>
-  
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
-
+<script defer="" src="js/jquery-2.1.1.min.js"></script>
+<script defer="" src="js/modernizr-2.8.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</link></link></head>
 <body class="wy-body-for-nav" role="document">
-
-  <div class="wy-grid-for-nav">
-
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-        <a href="." class="icon icon-home"> Risk Data Library docs</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="."> Risk Data Library docs</a>
+<div role="search">
+<form action="./search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
 </div>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <p class="caption"><span class="caption-text">Risk Data Library</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="index.html">Primer</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="usecases.html">Use cases</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="keyconcepts.html">Key concepts</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="standards.html">Core standards</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="taxonomy.html">Taxonomy</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Data model</span></p>
-                <ul class="current">
-                    <li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="hazard.html">Hazard</a>
-                    </li>
-                    <li class="toctree-l1 current"><a class="reference internal current" href="exposure.html">Exposure</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#table-ged4allexposure_model">Table: ged4all.exposure_model</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#table-ged4allasset">Table: ged4all.asset</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#table-ged4allcost_type">Table: ged4all.cost_type</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#table-ged4allcost">Table: ged4all.cost</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#table-ged4alloccupants">Table: ged4all.occupants</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#table-ged4alltags">Table: ged4all.tags</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#types">Types</a>
-    </li>
-    </ul>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="vulnerability.html">Vulnerability</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Implementation</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">Tutorials</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy RDL</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="data-preparation.html">Prepare data</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="data-import.html">Publish data</a>
-                    </li>
-                </ul>
-                <p class="caption"><span class="caption-text">About</span></p>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="history.html">History</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="governance.html">Governance</a>
-                    </li>
-                    <li class="toctree-l1"><a class="reference internal" href="license.html">License</a>
-                    </li>
-                </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href=".">Risk Data Library docs</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".">Docs</a> &raquo;</li>
-    
-      
-        
-          <li>Data model &raquo;</li>
-        
-      
-    
-    <li>Exposure</li>
-    <li class="wy-breadcrumbs-aside">
-      
-        <a href="https://github.com/GFDRR/rdl-docs/tree/main/docs/exposure.md"
-          class="icon icon-github"> Edit on GitHub</a>
-      
-    </li>
-  </ul>
-  
-  <hr/>
 </div>
-          <div role="main">
-            <div class="section">
-              
-                <h1 id="exposure-db-schema">Exposure DB schema</h1>
+<div aria-label="main navigation" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Risk Data Library</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Primer</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usecases.html">Use cases</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="keyconcepts.html">Key concepts</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standards.html">Core standards</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="taxonomy.html">Taxonomy</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Data model</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Overview</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hazard.html">Hazard</a>
+</li>
+<li class="toctree-l1 current"><a class="reference internal current" href="exposure.html">Exposure</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#table-ged4allexposure_model">Table: ged4all.exposure_model</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#table-ged4allasset">Table: ged4all.asset</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#table-ged4allcost_type">Table: ged4all.cost_type</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#table-ged4allcost">Table: ged4all.cost</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#table-ged4alloccupants">Table: ged4all.occupants</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#table-ged4alltags">Table: ged4all.tags</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#types">Types</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vulnerability.html">Vulnerability</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="loss.html">Loss</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Implementation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="implementation.html">Implementation</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tutorials</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="deploy.html">Deploy RDL</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-preparation.html">Prepare data</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data-import.html">Publish data</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="roadmap.html">Roadmap</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="history.html">History</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="governance.html">Governance</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="top navigation" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href=".">Risk Data Library docs</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a href=".">Docs</a> »</li>
+<li>Data model »</li>
+<li>Exposure</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/GFDRR/rdl-docs/tree/main/docs/exposure.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div role="main">
+<div class="section">
+<h1 id="exposure-db-schema">Exposure DB schema</h1>
 <p>The exposure schema was developed based on <a href="https://wiki.openstreetmap.org/wiki/GED4ALL">GEM Taxonomy 2.0</a> to accommodate the most important spatial features commonly employed in risk analysis to identify and estimate exposed value. 
 The <a href="https://www.hotosm.org/projects/global-exposure-database-for-all-ged4all">GED4ALL</a> database schema contains the following tables: contribution, exposure_model, asset, occupancy, cost, cost_type, and tags.</p>
 <p>Multiple types of structural/infrastructure assets and socio-economic exposure can be stored in the exposure database with attributes relevant to assessing risk from multiple hazards. 
@@ -164,11 +138,11 @@ The exposure schema provides 11 defined exposure types, for consistent classific
 The tables include general attributes that can be adapted to each asset type. More specific indicators can be stored using the <em>tags</em> table, e.g. population gender and age, urban growth rate, GDP or others.</p>
 <p>Exposure can be stored at multiple scales and using polygon (e.g., for a building footprint or number of buildings in a district), polyline (e.g. road network segment), and point (e.g. geolocated building at a lat,lon position). 
 Exposure units can be assigned the number night-time or day-time occupants, to represent population exposure.</p>
-<p><img alt="Screenshot" src="img/exposure.png" />
+<p><img alt="Screenshot" src="img/exposure.png"/>
 ERD (exposure schema): exposure table contents (green) and links to common tables (yellow). The schema includes a SQL view (cyan).</p>
 <h3 id="table-ged4allexposure_model">Table: <em>ged4all.exposure_model</em></h3>
 <p>Each row in this table represents a collection of assets with a taxonomy_source (GEM Taxonomy, SynerG, FAO, etc) and category (buildings, road network, etc). 
-A model can optionally contain one or more cost types (see model_cost_type), e.g. structural, contents and can also optionally contain information about the area occupied by the assets. Finally, a model can optionally specify any number of &quot;tags&quot;, which can be applied to each asset.</p>
+A model can optionally contain one or more cost types (see model_cost_type), e.g. structural, contents and can also optionally contain information about the area occupied by the assets. Finally, a model can optionally specify any number of "tags", which can be applied to each asset.</p>
 <table class="table">
 <thead>
 <tr>
@@ -251,8 +225,8 @@ A model can optionally contain one or more cost types (see model_cost_type), e.g
 The number_of_units field is used to specify the number of assets of this type at this location. 
 The taxonomy value must be set to a valid taxonomy string using the taxonomy system specified in the exposure_model table, and identifies the typology of this asset. </p>
 <p>There are two geometry fields providing geospatial information:
-- The &quot;the_geom&quot; field specifies a single point location and can be considered as a composite representation of latitude, longitude and a reference to WGS84. Only Point geometries are stored in this field.
-- The &quot;full_geom&quot; field is an optional representation of any geometry type (point, line, polygon, multipoint, multi-line, etc.) supported by the standard and can be used to describe the footprint of a building, regional boundaries, or lifelines.type (point, line, polygon, multipoint, multi-line, etc.) supported by the standard and can be used to describe the footprint of a building, regional boundaries, or lifelines.</p>
+- The "the_geom" field specifies a single point location and can be considered as a composite representation of latitude, longitude and a reference to WGS84. Only Point geometries are stored in this field.
+- The "full_geom" field is an optional representation of any geometry type (point, line, polygon, multipoint, multi-line, etc.) supported by the standard and can be used to describe the footprint of a building, regional boundaries, or lifelines.type (point, line, polygon, multipoint, multi-line, etc.) supported by the standard and can be used to describe the footprint of a building, regional boundaries, or lifelines.</p>
 <table class="table">
 <thead>
 <tr>
@@ -439,7 +413,7 @@ The value field provides the actual cost value in the unit specified in the corr
 <h3 id="table-ged4alloccupants">Table: <em>ged4all.occupants</em></h3>
 <p>The occupants table is used to store information about the occupants of an asset in a given period, for example, the number of people in a given building during the day and during the night. 
 For some cases the period might refer to a season, for example when considering livestock or agricultural assets. 
-In some communities the term &quot;occupancy&quot; is used to refer to building usage, for example &quot;industrial&quot; or &quot;residential&quot;; this concept can be modelled in the GED4ALL schema using tags and/or by using a taxonomy system that supports building usage specification, such as the GEM Building Taxonomy.</p>
+In some communities the term "occupancy" is used to refer to building usage, for example "industrial" or "residential"; this concept can be modelled in the GED4ALL schema using tags and/or by using a taxonomy system that supports building usage specification, such as the GEM Building Taxonomy.</p>
 <table class="table">
 <thead>
 <tr>
@@ -541,65 +515,44 @@ Tags may be used to store any named scalar information with an asset, but in par
 <tbody>
 <tr>
 <td>category_enum</td>
-<td><ul><li>Buildings<li>Indicators<li>Infrastructure<li>Crops, livestock and forestry</td>
+<td><ul><li>Buildings<li>Indicators<li>Infrastructure<li>Crops, livestock and forestry</li></li></li></li></ul></td>
 <td>Type of asset category</td>
 </tr>
 </tbody>
 </table>
 <p><br/></p>
-              
-            </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="vulnerability.html" class="btn btn-neutral float-right" title="Vulnerability">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="hazard.html" class="btn btn-neutral" title="Hazard"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
-  </div>
+</div>
+</div>
+<footer>
+<div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-right" href="vulnerability.html" title="Vulnerability">Next <span class="icon icon-circle-arrow-right"></span></a>
+<a class="btn btn-neutral" href="hazard.html" title="Hazard"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="versions">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-          <a href="https://github.com/GFDRR/rdl-docs/" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
-      
-      
-        <span><a href="hazard.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="vulnerability.html" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="js/theme.js" defer></script>
-      <script src="search/main.js" defer></script>
-    <script defer>
+</div>
+</section>
+</div>
+<div aria-label="versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<a class="fa fa-github" href="https://github.com/GFDRR/rdl-docs/" style="float: left; color: #fcfcfc"> GitHub</a>
+<span><a href="hazard.html" style="color: #fcfcfc;">« Previous</a></span>
+<span style="margin-left: 15px"><a href="vulnerability.html" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script>var base_url = '.';</script>
+<script defer="" src="js/theme.js"></script>
+<script defer="" src="search/main.js"></script>
+<script defer="">
         window.onload = function () {
             SphinxRtdTheme.Navigation.enable(true);
         };
     </script>
-
 </body>
 </html>
