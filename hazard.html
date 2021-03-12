@@ -69,6 +69,8 @@
                     </li>
                     <li class="toctree-l1 current"><a class="reference internal current" href="hazard.html">Hazard</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#schema-attributes">Schema attributes</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#flood-hazard-maps-for-kabul">Flood hazard maps for Kabul</a>
@@ -169,6 +171,7 @@
             <div class="section">
               
                 <h1 id="hazard">Hazard</h1>
+<h2 id="schema-attributes">Schema attributes</h2>
 <p>The hazard schema stores data about the intensity and occurrance probability of physical hazard phenomena such as floods, eartquakes, wildfires or others. The specific hazard process can be defined and measured with a specific intensity unit. For example, earthquake hazard may be represented as ground shaking, liquefaction or ground displacement.</p>
 <p>The schema specifies which type of analysis and data methodology that has generated the dataset. It supports either simulated probabilistic scenarios and empirical observations. If the dataset has been produced for a specific location, such a city, the name of the location can be included.</p>
 <table class="table">
@@ -207,7 +210,7 @@
 </tr>
 </tbody>
 </table>
-<p><br>When the scenario modelled refers to a specific period of time, this can be specified in terms of dates, period span and reference year. For example, an observed flood event that occurred from 1.10.2009 (time start) to 3.10.2009 (time end), spanning over 3 days (time span). When precise time collocation is unknow or inappkicabile, a general reference date such as "2009" is used to identify events (time year). This is also useful to specify future scenario, e.g. time year: 2050.</p>
+<p><br>When the scenario modelled refers to a specific period of time, this can be specified in terms of dates, period span and reference year. For example, an observed flood event that occurred from 1.10.2009 (time start) to 3.10.2009 (time end), spanning over 3 days (time span). When precise time collocation is unknow or inapplicabile, a general reference date such as "2009" is used to identify events (time year). This is also useful to specify future scenario, e.g. time year: 2050.</p>
 <table class="table">
 <thead>
 <tr>
@@ -603,11 +606,13 @@
 <tr>
 <td align="center">*</td>
 <td>Unit of measure</td>
-<td>PGA (m)</td>
+<td>PGA (g)</td>
 </tr>
 </tbody>
 </table>
-<p><br><hr></p>
+<p><br><hr>
+<br><hr>
+<br><hr></p>
 <h2 id="previous-version-as-in-the-gh-issue">Previous version (<a href="https://github.com/GFDRR/rdl-doc/issues/6">as in the GH issue</a>)</h2>
 <p>The <em><strong>Event set</strong></em> stores one or more scenarios for a specific hazard. The main hazard type is defined by a specific code defined in common tables. Key attributes are:</p>
 <table class="table">
@@ -726,7 +731,9 @@
 </tr>
 </tbody>
 </table>
-<p><br><hr></p>
+<p><br><hr>
+<br><hr>
+<br><hr></p>
 <h2 id="original-version-as-from-the-other-repo">Original version (<a href="https://github.com/GFDRR/rdl-doc">as from the other repo</a>)</h2>
 <p>The data structure contains entities nested as follows:</p>
 <pre><code>Event_set ( Event ( Footprint_set ( Footprint ( Footprint_data) ) ) )
