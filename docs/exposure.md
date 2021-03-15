@@ -1,8 +1,7 @@
 # Exposure
 ## Schema attributes
 
-The exposure schema was developed based on [GEM Taxonomy 2.0](https://wiki.openstreetmap.org/wiki/GED4ALL) to accommodate the most important spatial features commonly employed in risk analysis to identify and estimate exposed value. 
-The [GED4ALL](https://www.hotosm.org/projects/global-exposure-database-for-all-ged4all) database schema contains the following tables: contribution, exposure\_model, asset, occupancy, cost, cost\_type, and tags.
+The exposure schema covers a wide variety of data describing structural, infrastructural and environmental asset, population, and socio-economic descriptors, each with relevant attributes for assessing risk from multiple hazards. The schema was developed based on [GEM Taxonomy 2.0](https://wiki.openstreetmap.org/wiki/GED4ALL) to accommodate the most important spatial features commonly employed in risk analysis to identify and estimate exposed value. 
 
 ```mermaid
 classDiagram
@@ -11,131 +10,58 @@ classDiagram
     Model: Category
     Model: Occupancy
     class Asset1{
-      Occurrance frequency
-      Time reference
-      Hazard trigger
+      Taxonomy code
+      Value type
+      Value unit
     }
     class Asset2{
-      Occurrance frequency
-      Time reference
-      Hazard trigger
+      Taxonomy code
+      Value type
+      Value unit
     }
 ```
 
-Multiple types of structural/infrastructure assets and socio-economic exposure can be stored in the exposure database with attributes relevant to assessing risk from multiple hazards. 
-The exposure schema provides 11 defined exposure types, for consistent classification of assets in different datasets: Residential, Commercial, Industrial, Healthcare, Education, Government, Infrastructure, Crop, Livestock, Forestry, and Mixed (as in _cf\_common.occupancy\_enum_).
-The tables include general attributes that can be adapted to each asset type. More specific indicators can be stored using the _tags_ table, e.g. population gender and age, urban growth rate, GDP or others.
+The main features of an exposure dataset are specified by the **exposure model** attributes.
+Each exposure model includes one or more **assets**. Each asset could represent a single asset (e.g. one building) or a collection of assets (e.g aggregated buildings in an area). 
+The exposure schema covers 4 categories and 11 occupancy types for consistent classification of assets across schema. The taxonomy source specifies the taxonomy string used to identify individual asset features within a dataset. Occupancy can be optionally assigned for night-time or day-time, e.g. to discern resident population from daily commuters.
 
-Exposure can be stored at multiple scales and using polygon (e.g., for a building footprint or number of buildings in a district), polyline (e.g. road network segment), and point (e.g. geolocated building at a lat,lon position). 
-Exposure units can be assigned the number night-time or day-time occupants, to represent population exposure.
+|**Required**| **Attribute** | **Description** | **Type** |
+|:---:| --- | --- | --- |
+|*| Category | Type of asset | <ul><li>Buildings<li>Indicators<li>Infrastructures<li>Crops, livestock and forestry</ul> |
+|*| Occupancy | Destination of use of the asset | <ul><li>Residential<li>Commercial<li>Industrial<li>Infrastructure<li>Healthcare<li>Educational<li>Government<li>Crop<li>Livestock<li>Forestry<li>Mixed</ul> |
+| | Occupancy time | Period of occupancy | <ul><li>Night<li>Day |
+| | Taxonomy source | Name of adopted taxonomy model | Text |
+| | Taxonomy code | String used by the taxonomy model to identify specific asset features | Text |
+|*| Value type | Element to which value refers | <ul><li>Structure<li>Content<li>Product<li>Other</ul> |
+|*| Value unit | Unit to measure exposed value | Unit code |
+
+<br>Within one exposure model (e.g. one geospatial layer) there can be one or more **cost type** associated with damage to assets. For example, the cost of the building structure by square meter and the cost of the contents of a single building. The attributes are named accordingly within the datase, e.g. "Cost_structure" and "Cost_content".
+Additional **tags** attributes can be associated with an asset to link any information not envised in the exposure schema.
+
+<hr>
+
+##Examples
+
+Exposure data can be stored at multiple scales, more often using vectors, namely polygons (e.g. building footprint), points (e.g. asset geolocation) and lines (e.g. transport infrastructures, lifelines), but in same case exposure estimates are aggregated at ADM level or distributed over a raster grid.
+
+###Exposure map for Kabul
+
+Text
+
+![Screenshot](img/.jpg)
+
+|**Required**| **Attribute** | **Example** |
+|:---:| --- | --- |
+|*| Hazard type | Flood |
+|*| Analysis type | Probabilistic |
+|*| Calculation method | Simulated |
+|| Geographic area | Kabul |
+|| Frequency type | Return Period |
+|| Occurrance probability | 100 years |
+|| Occurence time (start) | 1958 |
+|| Occurence time (end) | 2001 |
+|| Occurence time (span) | 44 years |
+|*| Hazard process | River flood |
+|*| Unit of measure | Water depth (m) |
 
 <br><hr>
-
-
-###Table: _ged4all.exposure\_model_
-
-Each row in this table represents a collection of assets with a taxonomy\_source (GEM Taxonomy, SynerG, FAO, etc) and category (buildings, road network, etc). 
-A model can optionally contain one or more cost types (see model\_cost\_type), e.g. structural, contents and can also optionally contain information about the area occupied by the assets. Finally, a model can optionally specify any number of &quot;tags&quot;, which can be applied to each asset.
-
-| **Req** | **Field name** | **Type** | **Reference table** | **Description** |
-|:---:| --- | --- | --- | --- |
-| **\*** | id | INT | | Unique number ID |
-| **\*** | name | VARCHAR | | Name of exposure model |
-| | description | VARCHAR | | Description of exposure model |
-| | taxonomy\_source | VARCHAR | | Name of taxonomy source |
-| **\*** | category | ENUM | _ged4all.category\_enum_ | Type of asset |
-| | area\_type | VARCHAR | | Aggregated or per asset |
-| | area\_unit | VARCHAR | | Unit of measure of area |
-| | tag\_names | VARCHAR | | Additional tag information |
-| | use | ENUM | _cf\_common.occupancy\_enum_ | Usage type of the asset (e.g. residential, commercial) |
-
-<br/>
-###Table: _ged4all.asset_
-
-Each row in the asset table represents a single asset or collection of assets, such as a building, aggregated collection of buildings, an item in an infrastructure network, or an area of farmland. 
-The number\_of\_units field is used to specify the number of assets of this type at this location. 
-The taxonomy value must be set to a valid taxonomy string using the taxonomy system specified in the exposure\_model table, and identifies the typology of this asset. 
-
-There are two geometry fields providing geospatial information:
-- The &quot;the\_geom&quot; field specifies a single point location and can be considered as a composite representation of latitude, longitude and a reference to WGS84. Only Point geometries are stored in this field.
-- The &quot;full\_geom&quot; field is an optional representation of any geometry type (point, line, polygon, multipoint, multi-line, etc.) supported by the standard and can be used to describe the footprint of a building, regional boundaries, or lifelines.type (point, line, polygon, multipoint, multi-line, etc.) supported by the standard and can be used to describe the footprint of a building, regional boundaries, or lifelines.
-
-| **Req** | **Field name** | **Type** | **Reference table** | **Description** |
-|:---:| --- | --- | --- | --- |
-| **\*** | id | INT | | Unique number ID |
-| **\*** | exposure\_model\_id | INT | _ged4all.exposure\_model_ | Unique number ID of source exposure model |
-| **\*** | asset\_ref | VARCHAR | | Alphanumeric code supplied by user |
-| **\*** | taxonomy | VARCHAR | | Alphanumeric code for the taxonomy source |
-| | number\_of\_units | FLOAT | | Number of assets represented |
-| | area | FLOAT | _exposure\_model.area\_unit_ | Area of the asset in the units specified |
-| **\*** | the\_geom | GEOM | | Associated geometry data (point location) |
-| | full\_geom | GEOM | | Associated geometry data (polygon, multiline, multipolygon...) |
-
-<br/>
-###Table: _ged4all.cost\_type_
-
-Each exposure model can optionally have one or more types of cost associated with loss or damage to assets. 
-For example, the cost of the building structure by square meter or the cost of the contents of a single building. 
-Each cost type entry describes a category of cost, an aggregation type and a unit.
-
-| **Req** | **Field name** | **Type** | **Reference table** | **Description** |
-|:---:| --- | --- | --- | --- |
-| **\*** | id | INT | | Unique number ID |
-| **\*** | exposure\_model\_id | INT | _ged4all.exposure\_model_ | Unique number ID of source exposure model |
-| **\*** | cost\_type\_name | VARCHAR | | Type of asset cost (structural, non-structural, contents, business interruption) |
-| **\*** | aggregation\_type | VARCHAR | | Aggregated or per asset |
-| | unit | VARCHAR | | Cost unit of measure |
-
-<br/>
-###Table: _ged4all.cost_
-
-Each row in the cost table represents a cost of a given cost type for a given asset. 
-The asset\_id and cost\_type\_id fields are foreign keys used to identify an asset and model\_cost\_type. 
-The value field provides the actual cost value in the unit specified in the corresponding model\_cost\_type entry.
-
-| **Req** | **Field name** | **Type** | **Reference table** | **Description** |
-|:---:| --- | --- | --- | --- |
-| **_\*_** | id | INT | | Unique number ID |
-| **\*** | asset\_id | INT | _ged4all.asset_ | Unique number ID of the asset |
-| **\*** | cost\_type\_id | INT | _ged4all.cost\_type_ | Unique number ID of the cost type |
-| **\*** | value | FLOAT | | Cost value |
-| | deductible | FLOAT | | |
-| | insurance\_limit | FLOAT | | |
-
-<br/>
-###Table: _ged4all.occupants_
-
-The occupants table is used to store information about the occupants of an asset in a given period, for example, the number of people in a given building during the day and during the night. 
-For some cases the period might refer to a season, for example when considering livestock or agricultural assets. 
-In some communities the term &quot;occupancy&quot; is used to refer to building usage, for example &quot;industrial&quot; or &quot;residential&quot;; this concept can be modelled in the GED4ALL schema using tags and/or by using a taxonomy system that supports building usage specification, such as the GEM Building Taxonomy.
-
-| **Req** | **Field name** | **Type** | **Reference table** | **Description** |
-|:---:| --- | --- | --- | --- |
-| **_\*_** | id | INT | | Unique number ID |
-| **\*** | asset\_id | INT | _ged4all.asset_ | Unique number ID of the asset |
-| **\*** | period | VARCHAR | | Occupancy type (night/day) |
-| **\*** | num_occupants | FLOAT | | Number of occupants |
-
-<br/>
-###Table: _ged4all.tags_
-
-Each row in the tags table represents a name and value pair for a given asset. 
-The asset\_id is a foreign key used to identify an asset. 
-The name field represents the name of the tag while the value field contains the associated value. 
-Tags may be used to store any named scalar information with an asset, but in particular are useful for storing socio-economic indicators and their associated values, and also for grouping assets into census tracts, for example.
-
-| **Req** | **Field name** | **Type** | **Reference table** | **Description** |
-|:---:| --- | --- | --- | --- |
-| **_\*_** | id | INT | | Unique number ID |
-| **\*** | asset\_id | INT | _ged4all.asset_ | Unique number ID of the asset |
-| **\*** | name | VARCHAR | | Name of the tag |
-| **\*** | value | VARCHAR | | Number associated with the tag |
-
-<br/>
-##Types
-
-| **ENUM name** | Types | Description |
-| --- | --- | --- |
-| category_enum | <ul><li>Buildings<li>Indicators<li>Infrastructure<li>Crops, livestock and forestry | Type of asset category |
-
-<br/>

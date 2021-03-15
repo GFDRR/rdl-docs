@@ -19,7 +19,10 @@ nav:
     - 'Vulnerability': 'vulnerability.md'
     - 'Loss': 'loss.md'
 - Implementation:
-    - 'implementation.md'
+    - 'Overview': 'implementation.md'
+    - 'Files and folders': 'folder_files.md'
+    - 'JKAN catalogue': 'jkan.md'
+    - 'PostGRESQL DB': 'postgres.md'
 - Tutorials:
     - 'Deploy RDL': 'deploy.md'
     - 'Prepare data': 'data-preparation.md'

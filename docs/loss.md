@@ -8,7 +8,9 @@ classDiagram
     Model -- Curve
     Model: Hazard type
     Model: Exposure category
+    Model: Calculation method
     Model: Link data
+
     class Map{
       Occurrance frequency
       Time reference
@@ -27,12 +29,13 @@ classDiagram
     }
 ```
 
-The main attributes of the **loss model** describe the hazard and process for which the loss are calculated, and the category of asset on which losses insist. The schema includes the direct links to the original dataset of hazard, exposure, and vulnerability that were used to calculate the loss.
+The main attributes of the **loss model** describe the hazard and process for which the loss are calculated, the method of calculation (to discern empirical events from simulated scenarios) and the category of asset on which losses insist. The schema includes the direct links to the original dataset of hazard, exposure, and vulnerability that were used to calculate the loss.
 
 |**Required**| **Attribute** | **Description** | **Type** |
 |:---:| --- | --- | --- |
 |*| Hazard type | Main hazard type from list of options | <ul><li>Coastal Flood<li>Convective Storm<li>Drought<li>Earthquake<li>Extreme Temperature<li>Flood<li>Landslide<li>Tsunami<li>Volcanic<li>Wildfire<li>Strong Wind<li>Multi-Hazard</ul> |
 | | Hazard process | Specific hazard process | Options list |
+| | Calculation method | How the scenario was calculated | <ul><li>Inferred<li>Simulated<li>Observed |
 |*| Exposure occupancy | Destination of use of the asset | <ul><li>Residential<li>Commercial<li>Industrial<li>Infrastructure<li>Healthcare<li>Educational<li>Government<li>Crop<li>Livestock<li>Forestry<li>Mixed</ul> |
 |*| Exposure category | Category of asset suffering the losses | <ul><li>Buildings<li>Indicators<li>Infrastructures<li>Crops, livestock and forestry</ul> |
 |*| Value type | Element on which loss insist | <ul><li>Structure<li>Content<li>Product<li>Other</ul> |
@@ -63,7 +66,7 @@ The main attributes of the **loss model** describe the hazard and process for wh
 |*| Impact | The type of impact | <ul><li>Direct<li>Indirect<li>Total |
 |*| Loss type | The type of loss | <ul><li>Ground up<li>Insured</ul> |
 |*| Metric | Type of loss metric | <ul><li>Average Annual Losses<li>Annual Average Loss Ratio<li>Probable Maximal Loss |
-|*| Unit | Cost unit of measure | Code |
+|*| Unit | Cost unit of measure | Unit code |
 
 <br>
 
@@ -73,9 +76,13 @@ Losses can be rapresented in many different way: regular raster grids, points, o
 
 ###Flood loss scenarios for Afghanistan, 2050
 
-Schema attributes for loss map related to future river flood hazard scenarios (2050) over all types of exposure occupancies for Afghanistan. The losses are higher in the most densely builtup area of Kabul.
+Schema attributes for loss map related to future river flood hazard scenarios (2050) over all types of exposure occupancies for Afghanistan.
 
 ![Screenshot](img/lss_fl_afg.jpg)
+
+The losses are higher in the most densely built-up area of Kabul.
+
+![Screenshot](img/lss_fl_kabul.jpg)
 
 |**Required**| **Attribute** | **Example** |
 |:---:| --- | --- |
@@ -99,8 +106,9 @@ Schema attributes for loss map related to future river flood hazard scenarios (2
 
 ###Observed losses
 
+Insert example of recorded empirical losses.
 
-![Screenshot](img/lss_fl_kabul.jpg)
+![Screenshot](img/.jpg)
 
 |**Required**| **Attribute** | **Example** |
 |:---:| --- | --- |

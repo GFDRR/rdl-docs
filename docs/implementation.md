@@ -1,9 +1,9 @@
-# Implementation
+# Overview
 
-High-level simplified UML-style diagram that focuses on the core relationships between entities, rather than listing all of their attributes. This helps to put the various entities in context. 
-a description of how the key elements of the model fit together, with pointers to the detailed sections
+The RDL can applies in many ways:
 
-## JKAN catalogue
+- Structure and naming convention of risk data files and folders
+- Catalogue implementation based on open-source JKAN static content creator for simple file storage and download
+- Database implementation based on PostGRESQL for advanced features
 
-
-## PostGRES database
+<br><hr>
