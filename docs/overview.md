@@ -1,28 +1,50 @@
 # DATABASE SCHEMA OVERVIEW
 
-The Risk schema includes four components:
+Following [key concepts](keyconcepts.md), the Risk Data schema includes four components:
 
-- **Hazard**: describes hazard scenario footprints and return period hazard maps 
-- **Exposure**: describes exposed assets and population
-- **Vulnerability**: describes physical vulnerbaility, fragility and damage-to-loss models
-- **Loss**: describes modelled damage and losses produced in a risk assessment
+- [**Hazard**](hazard.md): main hazard type, specific process, trigger of the hazard, occurrance frequency of event, intensity unit to measure the process and analytical method.
+- [**Exposure**](exposure.md): asset category, occupancy and specific taxonomy, cost type and value.
+- [**Vulnerability**](vulnerability.md): model that links hazard intensity and exposure classification to measure of impact over the total exposed value.
+- [**Loss**](loss.md): modelled damage and losses produced in a risk assessment as a function of hazard, exposure and vulnerability components.
 
-
-```
-high-level simplified UML-style diagram that focuses on the core relationships between entities,
-rather than listing all of their attributes. This helps to put the various entities in context. 
-a description of how the key elements of the model fit together, with pointers to the detailed sections.
-```
+The diagram below shows the core relationships between schema components, rather than listing all of their attributes.
 
 ```mermaid
-graph TD
-A[Risk Data] --> B[Risk Data Library]
-B --> C[Hazard]
-B --> D[Exposure]
-B --> E[Vulnerability]
-B --> F[Loss]
+classDiagram
+    Dataset -- Hazard
+    Dataset -- Exposure
+    Dataset -- Vulnerability
+    Dataset -- Loss
+    Dataset: -Project name
+    Dataset: -Coverage
+    Dataset: -Purpose
+    Dataset: -Bibliography
+    class Hazard{
+      -Type, Process
+      -Trigger
+      -Frequency
+      -Intensity unit
+      -Analytical method
+        }
+    class Exposure{
+      -Asset category
+      -Occupancy
+      -Taxonomy
+      -Cost type
+    }
+    class Vulnerability{
+      -Hazard process
+      -Exposure taxonomy
+      -Analytical  method 
+      -Applicability
+    }
+     class Loss{
+      -Hazard process
+      -Exposure taxonomy
+      -Loss frequency
+      -Loss metric
+    }          
 ```
-
 <br>
 ##Dataset general attributes
 

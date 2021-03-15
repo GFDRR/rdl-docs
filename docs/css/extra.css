@@ -52,3 +52,7 @@ margin-bottom: 0.5em!important;
   color: #ffffff;
   background: #0b3860;
 }
+svg[id^="mermaid-"] {
+  min-width: 40em;
+  max-width: 80em;
+}
