@@ -73,7 +73,7 @@ Losses can be rapresented in many different way: regular raster grids, points, o
 
 ###Flood loss scenarios for Afghanistan, 2050
 
-Schema attributes for loss map related to river flood hazard over the country of Afghanistan.
+Schema attributes for loss map related to future river flood hazard scenarios (2050) over all types of exposure occupancies for Afghanistan. The losses are higher in the most densely builtup area of Kabul.
 
 ![Screenshot](img/lss_fl_afg.jpg)
 
@@ -81,7 +81,7 @@ Schema attributes for loss map related to river flood hazard over the country of
 |:---:| --- | --- |
 |*| Hazard type | Flood |
 | | Hazard process | River flood |
-|*| Exposure occupancy | Residential |
+|*| Exposure occupancy | Mixed |
 |*| Exposure category | Buildings |
 |*| Value type | Structure |
 | | Hazard link | [Dataset](http://jkan.riskdatalibrary.org/datasets/hzd-afg-fl-baseline) |
@@ -100,7 +100,7 @@ Schema attributes for loss map related to river flood hazard over the country of
 ###Observed losses
 
 
-![Screenshot](img/.jpg)
+![Screenshot](img/lss_fl_kabul.jpg)
 
 |**Required**| **Attribute** | **Example** |
 |:---:| --- | --- |
