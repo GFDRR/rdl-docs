@@ -75,7 +75,7 @@ Losses can be rapresented in many different way: regular raster grids, points, o
 
 Schema attributes for loss map related to river flood hazard over the country of Afghanistan.
 
-![Screenshot](img/hzd_fl_kabul.jpg)
+![Screenshot](img/lss_fl_afg.jpg)
 
 |**Required**| **Attribute** | **Example** |
 |:---:| --- | --- |
@@ -97,10 +97,10 @@ Schema attributes for loss map related to river flood hazard over the country of
 
 <br>
 
-###Flood observed losses
+###Observed losses
 
 
-![Screenshot](img/hzd_eq_afg.jpg)
+![Screenshot](img/.jpg)
 
 |**Required**| **Attribute** | **Example** |
 |:---:| --- | --- |

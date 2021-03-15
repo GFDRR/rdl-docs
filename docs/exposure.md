@@ -1,7 +1,26 @@
-# Exposure DB schema
+# Exposure
+## Schema attributes
 
 The exposure schema was developed based on [GEM Taxonomy 2.0](https://wiki.openstreetmap.org/wiki/GED4ALL) to accommodate the most important spatial features commonly employed in risk analysis to identify and estimate exposed value. 
 The [GED4ALL](https://www.hotosm.org/projects/global-exposure-database-for-all-ged4all) database schema contains the following tables: contribution, exposure\_model, asset, occupancy, cost, cost\_type, and tags.
+
+```mermaid
+classDiagram
+    Model -- Asset1
+    Model -- Asset2
+    Model: Category
+    Model: Occupancy
+    class Asset1{
+      Occurrance frequency
+      Time reference
+      Hazard trigger
+    }
+    class Asset2{
+      Occurrance frequency
+      Time reference
+      Hazard trigger
+    }
+```
 
 Multiple types of structural/infrastructure assets and socio-economic exposure can be stored in the exposure database with attributes relevant to assessing risk from multiple hazards. 
 The exposure schema provides 11 defined exposure types, for consistent classification of assets in different datasets: Residential, Commercial, Industrial, Healthcare, Education, Government, Infrastructure, Crop, Livestock, Forestry, and Mixed (as in _cf\_common.occupancy\_enum_).
@@ -10,8 +29,8 @@ The tables include general attributes that can be adapted to each asset type. Mo
 Exposure can be stored at multiple scales and using polygon (e.g., for a building footprint or number of buildings in a district), polyline (e.g. road network segment), and point (e.g. geolocated building at a lat,lon position). 
 Exposure units can be assigned the number night-time or day-time occupants, to represent population exposure.
 
-![Screenshot](img/exposure.png)
-ERD (exposure schema): exposure table contents (green) and links to common tables (yellow). The schema includes a SQL view (cyan).
+<br><hr>
+
 
 ###Table: _ged4all.exposure\_model_
 
