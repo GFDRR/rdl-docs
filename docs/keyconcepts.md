@@ -11,7 +11,7 @@ A disaster risk assessment provides a foundation for long-term engagement and in
 Explain in detail how the concepts above links to the components of the RDL, in particular explain how "loss" component is related to risk.
 
 <br>
-### How risk data is commonly produced and used?
+## Risk data examples
 
 Visual examples?
 Diagram
