@@ -9,6 +9,9 @@ jobs:
     name: Deploy docs
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout gh-pages
+        uses: actions/checkout@v2
+
       - name: Setup environment
         uses: conda-incubator/setup-miniconda@v2
         with:
@@ -24,9 +27,6 @@ jobs:
           pip install mkdocs-bootstrap
           pip install mkdocs-bootstrap-tables-plugin
           pip install mkdocs-mermaid2-plugin
-
-      - name: Checkout gh-pages
-        uses: actions/checkout@v2
 
       - name: Deploy docs
         uses: mhausenblas/mkdocs-deploy-gh-pages@master
