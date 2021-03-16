@@ -18,19 +18,19 @@ jobs:
           environment-file: linux_docs_gen.yml
           activate-environment: docs_gen
           python-version: 3.8.6
-          channels: defaults,conda-forge
-
-      - name: Check python and conda
-        run: |
-          which python
-          conda list
+          channels: conda-forge,defaults
 
       - name: Deploy docs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@master
+        shell: bash -l {0}
+        # uses: mhausenblas/mkdocs-deploy-gh-pages@master
         # Or use mhausenblas/mkdocs-deploy-gh-pages@nomaterial to build without the mkdocs-material theme
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           CUSTOM_DOMAIN: docs.riskdatalibrary.org
           CONFIG_FILE: mkdocs.yml
           EXTRA_PACKAGES: build-base
-          # GITHUB_DOMAIN: github.myenterprise.com
+        run: |
+          conda init bash
+          conda activate docs_gen
+          mkdocs gh-deploy --force
+
