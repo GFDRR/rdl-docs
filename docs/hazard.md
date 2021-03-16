@@ -1,6 +1,6 @@
 # Hazard
 ## Schema attributes
-The hazard schema stores data about the intensity and occurrance probability of physical hazard phenomena such as floods, eartquakes, wildfires or others. The specific hazard process can be defined and measured with a specific intensity unit. For example, earthquake hazard may be represented as ground shaking, liquefaction or ground displacement.
+The hazard schema stores data about the intensity and occurrence probability of physical hazard phenomena such as floods, eartquakes, wildfires or others. The specific hazard process can be defined and measured with a specific intensity unit. For example, earthquake hazard may be represented as ground shaking, liquefaction or ground displacement.
 
 ```mermaid
 classDiagram
@@ -9,12 +9,12 @@ classDiagram
     Event set: Hazard type
     Event set: Analytical method
     class Event1{
-      Occurrance frequency
+      occurrence frequency
       Time reference
       Hazard trigger
     }
     class Event2{
-      Occurrance frequency
+      occurrence frequency
       Time reference
       Hazard trigger
     }
@@ -62,12 +62,12 @@ The schema specifies which type of analysis and data methodology that has genera
 || Time span | The duration of the modelled period | Number |
 || Time year | One reference year to univocally identify the scenario | Date (year) |
 
-<br>When instead the hazard scenario is represented in probabilistic terms, the occurrance probability (frequency distribution) of hazard can be expressed in different ways. The most common way to communicate this is the "return period", expressed as the number of years after which a given hazard intensity could occurr again: RP 100 indicates that that event has a probability of once in 100 years. This attirbute can indicate individual layer frequency (RP100) or a range of frequencies for a collection of layers (RP10-100) The probability of occurrance is usually calculated on the basis of a reference period that provides observations: this period can be specified by start date, end date and time span. For example, an analysis of eartquake frequency based on seismic observations from 1934 (occurrance time start) to 2001 (occurrance time end), for a total count of 66 years (occurrance time span).
+<br>When instead the hazard scenario is represented in probabilistic terms, the occurrence probability (frequency distribution) of hazard can be expressed in different ways. The most common way to communicate this is the "return period", expressed as the number of years after which a given hazard intensity could occurr again: RP 100 indicates that that event has a probability of once in 100 years. This attirbute can indicate individual layer frequency (RP100) or a range of frequencies for a collection of layers (RP10-100) The probability of occurrence is usually calculated on the basis of a reference period that provides observations: this period can be specified by start date, end date and time span. For example, an analysis of eartquake frequency based on seismic observations from 1934 (occurrence time start) to 2001 (occurrence time end), for a total count of 66 years (occurrence time span).
 
 |**Required**| **Attribute** | **Description** | **Type** |
 |:---:| --- | --- | --- |
 || Frequency type | The frequency of occurrence of the present event | <ul><li>Rate of Exceedence<li>Probability of Exceedence<li>Return Period</ul> |
-|| Occurrance probability | For probabilistic scenario, the occurrance probability is expressed according to frequency type | Text |
+|| occurrence probability | For probabilistic scenario, the occurrence probability is expressed according to frequency type | Text |
 || Occurence time (start) | Start date of the period used to infer the occurrence probability | Date (year) |
 || Occurence time (end) | End date of the period used to specify the occurrence probability | Date (year) |
 || Occurence time (span) | The duration of the period used to specify the occurrence probability | Number of years |
@@ -132,7 +132,7 @@ Hazard data are most often represented by geospatial grids (raster); sometimes t
 
 ###Flood hazard maps for Kabul
 
-Schema attributes for flood hazard map related to occurrance probability of a river flood event with a return period of once in 100 years over Kabul, Afghanistan. The hydrological data used for modelling the intensity of floods is derived from observations over the period 1958-2001 (44 years). The hazard intensity is measured as water depth, in meters. These information cover all mandatory fields, and few optional fields.
+Schema attributes for flood hazard map related to occurrence probability of a river flood event with a return period of once in 100 years over Kabul, Afghanistan. The hydrological data used for modelling the intensity of floods is derived from observations over the period 1958-2001 (44 years). The hazard intensity is measured as water depth, in meters. These information cover all mandatory fields, and few optional fields.
 
 ![Screenshot](img/hzd_fl_kabul.jpg)
 
@@ -143,7 +143,7 @@ Schema attributes for flood hazard map related to occurrance probability of a ri
 |*| Calculation method | Simulated |
 || Geographic area | Kabul |
 || Frequency type | Return Period |
-|| Occurrance probability | 100 years |
+|| occurrence probability | 100 years |
 || Occurence time (start) | 1958 |
 || Occurence time (end) | 2001 |
 || Occurence time (span) | 44 years |
@@ -153,7 +153,7 @@ Schema attributes for flood hazard map related to occurrance probability of a ri
 <br>
 
 ###Earthquake hazard maps for Afghanistan
-Schema attributes for earthquake hazard map related to occurrance probability of an event with return period of  once in 1000 years over Afghanistan. The seismic data catalogue behind the calculation of occurrance probability start from year 800, covering a period of 1200 years. The hazard intensity is measured as Peak Ground Acceleration, expressed in (g).
+Schema attributes for earthquake hazard map related to occurrence probability of an event with return period of  once in 1000 years over Afghanistan. The seismic data catalogue behind the calculation of occurrence probability start from year 800, covering a period of 1200 years. The hazard intensity is measured as Peak Ground Acceleration, expressed in (g).
 
 ![Screenshot](img/hzd_eq_afg.jpg)
 
@@ -163,7 +163,7 @@ Schema attributes for earthquake hazard map related to occurrance probability of
 |*| Analysis type | Probabilistic |
 |*| Calculation method | Simulated |
 || Frequency type | Return Period |
-|| Occurrance probability | 1000 years |
+|| occurrence probability | 1000 years |
 || Occurence time (start) | 800 |
 || Occurence time (end) | 2001 |
 || Occurence time (span) | 1200 years |

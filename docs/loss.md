@@ -12,7 +12,7 @@ classDiagram
     Model: Link data
 
     class Map{
-      Occurrance frequency
+      occurrence frequency
       Time reference
       Impact type
       Loss type
@@ -20,7 +20,7 @@ classDiagram
       Loss unit
     }
     class Curve{
-      Occurrance frequency
+      occurrence frequency
       Time reference
       Impact type
       Loss type
@@ -52,12 +52,12 @@ The main attributes of the **loss model** describe the hazard and process for wh
 || Time span | The duration of the modelled period | Number |
 || Time year | One reference year to univocally identify the scenario | Date (year) |
 
-<br>When instead the hazard scenario is represented in probabilistic terms, the occurrance probability (frequency distribution) of hazard can be expressed in different ways. The most common way to communicate this is the "return period", expressed as the number of years after which a given hazard intensity could occurr again: RP 100 indicates that that event has a probability of once in 100 years. This attirbute can indicate individual layer frequency (RP100) or a range of frequencies for a collection of layers (RP10-100).
+<br>When instead the hazard scenario is represented in probabilistic terms, the occurrence probability (frequency distribution) of hazard can be expressed in different ways. The most common way to communicate this is the "return period", expressed as the number of years after which a given hazard intensity could occurr again: RP 100 indicates that that event has a probability of once in 100 years. This attirbute can indicate individual layer frequency (RP100) or a range of frequencies for a collection of layers (RP10-100).
 
 |**Required**| **Attribute** | **Description** | **Type** |
 |:---:| --- | --- | --- |
 || Frequency type | The frequency of occurrence of the present event | <ul><li>Rate of Exceedence<li>Probability of Exceedence<li>Return Period</ul> |
-|| Occurrance probability | For probabilistic scenario, the occurrance probability is expressed according to frequency type | Text |
+|| occurrence probability | For probabilistic scenario, the occurrence probability is expressed according to frequency type | Text |
 
 <br>Additional attributes are specific to loss, describing the type of impact, the type of loss, the loss metric and the unit used to measure it.
 
@@ -96,7 +96,7 @@ The losses are higher in the most densely built-up area of Kabul.
 | | Vulnerability link |  |
 | | Time year | 2050 |
 | | Frequency type | Return Period |
-| | Occurrance probability | RP 5-1000 years |
+| | occurrence probability | RP 5-1000 years |
 |*| Impact | Direct |
 |*| Loss type | Ground up |
 |*| Metric | Average Annual Losses |
@@ -116,7 +116,7 @@ Insert example of recorded empirical losses.
 |*| Analysis type | Probabilistic |
 |*| Calculation method | Simulated |
 || Frequency type | Return Period |
-|| Occurrance probability | 1000 years |
+|| occurrence probability | 1000 years |
 || Occurence time (start) | 800 |
 || Occurence time (end) | 2001 |
 || Occurence time (span) | 1200 years |

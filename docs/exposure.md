@@ -57,7 +57,7 @@ Text
 |*| Calculation method | Simulated |
 || Geographic area | Kabul |
 || Frequency type | Return Period |
-|| Occurrance probability | 100 years |
+|| occurrence probability | 100 years |
 || Occurence time (start) | 1958 |
 || Occurence time (end) | 2001 |
 || Occurence time (span) | 44 years |
