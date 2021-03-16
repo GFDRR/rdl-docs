@@ -119,8 +119,8 @@ The schema specifies which type of analysis and data methodology that has genera
 | Volcanic | Lava |
 | Volcanic | Pyroclastic Flow |
 | Wildfire | Wildfire |
-| Wildfire | Extratropical cyclone |
-| Wildfire | Tropical cyclone |
+| Strong Wind | Extratropical cyclone |
+| Strong Wind | Tropical cyclone |
 
 </div>
 
