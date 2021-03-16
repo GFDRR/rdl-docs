@@ -9,6 +9,22 @@ jobs:
     name: Deploy docs
     runs-on: ubuntu-latest
     steps:
+      - name: Setup environment
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: docs_gen
+          channels: defaults,conda-forge
+          environment-file: docs_gen.yml
+          auto-update-conda: true
+          auto-activate-base: false
+
+      - name: Install mkdocs themes
+        shell: bash -l {0}
+        run: |
+          pip install mkdocs-bootstrap
+          pip install mkdocs-bootstrap-tables-plugin
+          pip install mkdocs-mermaid2-plugin
+
       - name: Checkout gh-pages
         uses: actions/checkout@v2
 
