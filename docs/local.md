@@ -9,7 +9,7 @@ Words
 To help univocally identify the content of a dataset, the filename must summarise all the key information that allow to distinquish it from the others.
 The general format, all in lower caps, uses a tag approach to build the full filename:
 
-      `[component_code]-{project_name}-[country_iso]-{schema_specifics}-{time}`
+      [component_code]-{project_name}-[country_iso]-{schema_specifics}-{time}
 
 The name is made of [required] and {optional} attributes. Each component uses the most relevant attribute as schema_specifics, for example:
 

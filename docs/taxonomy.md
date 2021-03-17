@@ -777,6 +777,5 @@ Natural hazards are a complex phenomenon featuring large number of interactions 
 |  | INFTCORWG  | Railways, goods transported |
 
 </div>
-<br>
 
 <br><hr>
