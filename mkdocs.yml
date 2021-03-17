@@ -20,7 +20,7 @@ nav:
     - 'Loss': 'loss.md'
 - Implementation:
     - 'Overview': 'implementation.md'
-    - 'Files and folders': 'folder_files.md'
+    - 'Local': 'local.md'
     - 'JKAN catalogue': 'jkan.md'
     - 'PostGRESQL DB': 'postgres.md'
 - Tutorials:

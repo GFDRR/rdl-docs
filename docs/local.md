@@ -1,4 +1,10 @@
-## Folder tree and file naming
+# Local schema implementation
+
+## Naming convention for files and project folder
+
+Words
+
+### Files
 
 To help univocally identify the content of a dataset, the filename must summarise all the key information that allow to distinquish it from the others.
 The general format, all in lower caps, uses a tag approach to build the full filename:
@@ -26,5 +32,7 @@ Example: flood depth-damage function developed for India by JRC over industrial 
 `lss-[country_iso]-{project_name}-{hazard_type}-{occupancy}-{time}`<br>
 Example: eartquake losses over Madagascar infrastructures over the period 1920-2012 is named:<br>
 **lss-mdg-eq-infrastructrure-1920_2012**
+
+### Folders
 
 <br><hr>
