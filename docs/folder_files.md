@@ -11,18 +11,20 @@ The name is made of [required] and {optional} attributes. Each component uses th
 `hzd-[country_iso]-{project_name}-{hazard_type}-{process_type}-{hazard_trigger}-{frequency}-{time}`<br>
 Example: pluvial flood hazard scenario with return period 10 years in 2050 for Afghanistan is named:<br>
 **hzd-afg-mhra-fl-fpf-rp10-2050**
-  
+<br>  
 - Exposure:<br>
 `exp-[country_iso]-{project_name}-{occupancy}-{exposure_model}-{time}`<br>
 Example: residential exposure in Madagascar from Open Street Map 2015 is named:<br>
 **exp-mdg-swio_rafi-residential-osm-2015**
-
+<br>
 - Vulnerability:<br>
 `vln-[country_iso]-{project_name}-{hazard_type}-{occupancy}-{vulnerability_model}`<br>
 Example: flood depth-damage function developed for India by JRC over industrial land cover is named:<br>
 **vln-ind-fl-industrial-jrc**
-
+<br>
 - Loss:<br>
 `lss-[country_iso]-{project_name}-{hazard_type}-{occupancy}-{time}`<br>
 Example: eartquake losses over Madagascar infrastructures over the period 1920-2012 is named:<br>
 **lss-mdg-eq-infrastructrure-1920_2012**
+
+<br><hr>
