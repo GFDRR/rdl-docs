@@ -104,7 +104,7 @@ The schema specifies which type of analysis and data methodology that has genera
 | Earthquake | Primary Rupture |
 | Earthquake | Secondary Rupture |
 | Earthquake | Ground Motion |
-| Earthquake | EQ | Liquefaction |
+| Earthquake | Liquefaction |
 | Extreme Temperature | Extreme cold |
 | Extreme Temperature | Extreme heat |
 | Flood | Fluvial Flood |
