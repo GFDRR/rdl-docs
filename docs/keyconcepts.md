@@ -30,20 +30,20 @@ Disaster risk comprises different types of potential impacts and losses (direct 
 
 <table><tr>
 <td align="center" width=50% bgcolor="#0b3860"><b><font color="#fff">Hazard: map of flood water depth</font></b></td>
-<td align="center" width=50% bgcolor="#0b3860"><b><font color="#fff">Exposure: map residential asset</font></b></td></tr>
-<tr><td><img src="img/hzd_fl_kabul.jpg" width="100%"></td><td><img src="img/hzd_fl_kabul.jpg" width="100%"></td></tr>
+<td align="center" width=50% bgcolor="#0b3860"><b><font color="#fff">Exposure: buildings footprints and population</font></b></td></tr>
+<tr><td><img src="img/sample_hzd.jpg" width="100%"></td><td><img src="img/sample_exp.jpg" width="100%"></td></tr>
 <tr>
-<td align="center" width=50% bgcolor="#0b3860"><b><font color="#fff">Vulnerability: function</font></b></td>
-<td align="center" width=50% bgcolor="#0b3860"><b><font color="#fff">Impacts and losses</font></b></td></tr>
-<tr><td><img src="img/hzd_fl_kabul.jpg" width="100%"></td><td><img src="img/lss_fl_kabul.jpg" width="100%"></td></tr>
+<td align="center" width=50% bgcolor="#0b3860"><b><font color="#fff">Vulnerability: depth-damage function</font></b></td>
+<td align="center" width=50% bgcolor="#0b3860"><b><font color="#fff">Impacts and losses: USD costs of replacement</font></b></td></tr>
+<tr><td><img src="img/sample_vln.jpg" width="100%"></td><td><img src="img/sample_lss.jpg" width="100%"></td></tr>
 </table>
 <br>
 
 ## Background documentation
 
-on the main website or other sources
+- [Solving the Puzzle report](http://riskdatalibrary.org/assets/docs/communityReports/solving-the-puzzle-report.pdf) provides a community perspective on disaster risk information with focus on high-impact activities that will promote the creation and sharing of risk data and model.
 
-- [UNDRR terminology](https://www.undrr.org/terminology)
+- [UNDRR terminology](https://www.undrr.org/terminology) of Disaster Risk Reduction
 
 
 <br><hr>
