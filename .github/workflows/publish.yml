@@ -15,10 +15,12 @@ jobs:
       - name: Setup environment
         uses: conda-incubator/setup-miniconda@v2
         with:
-          environment-file: linux_docs_gen.yml
-          activate-environment: docs_gen
-          python-version: 3.8.6
+          python-version: 3.8
+          mamba-version: "*"
           channels: conda-forge,defaults
+          channel-priority: true
+          activate-environment: docs_gen
+          environment-file: linux_docs_gen.yml
 
       - name: Deploy docs
         shell: bash -l {0}
