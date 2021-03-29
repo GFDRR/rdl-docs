@@ -1,10 +1,8 @@
 # Local schema implementation
 
-## Naming convention for files and project folder
-
 Structuring and naming of risk data files within a project folder represent the simplest and most direct level of implementation of the Risk Data Standard.
 
-### Files
+## Naming convention for files
 
 To help univocally identify the content of a dataset file, the filename should summarise all the key information that allow to distinquish it from the others.
 The general format, all in lower caps, uses a tag approach to build the full filename:
@@ -34,6 +32,6 @@ Example: eartquake losses over Madagascar infrastructures over the period 1920-2
 **lss-mdg-eq-infrastructrure-1920_2012**
 
 <br>
-### Folders
+## Folders structure
 
 <br><hr>
