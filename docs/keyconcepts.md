@@ -24,7 +24,7 @@ Multi-hazard means (1) the selection of multiple major hazards that the country 
 <br><br>
 <li class="lis"><b>Disaster Risk:</b> The potential loss of life, injury, or destroyed or damaged assets which could occur to a system, society or a community in a specific period of time, determined probabilistically as a function of hazard, exposure, vulnerability and coping capacity.<br>
 Disaster risk comprises different types of potential impacts and losses (direct and indirect, tangible and intangible) which are sometimes difficult to quantify. Nevertheless, with knowledge of the prevailing hazards, the patterns of population and socio-economic development and their tendency to suffer impacts, disaster risks can be assessed and mapped, at least in broad terms.
-</ul>
+</ul><br>
 
 ## Risk data examples
 
