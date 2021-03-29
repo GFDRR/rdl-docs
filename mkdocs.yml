@@ -6,8 +6,7 @@ edit_uri: tree/main/docs
 
 nav:
 - Risk Data Library:
-    - 'Primer': 'index.md'
-    - 'Introduction': 'introduction.md'
+    - 'Overview': 'index.md'
     - 'Use cases': 'usecases.md'
     - 'Key concepts': 'keyconcepts.md'
     - 'Core standards': 'standards.md'

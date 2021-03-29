@@ -44,6 +44,16 @@ ul {
 line-height: 1.7em!important;
 margin-bottom: 0.5em!important;
 }
+.lis {
+list-style-type: square!important;
+}
+.lic {
+list-style-type: circle!important;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-bottom: 20px;
+margin-right: 20px;
+}
 
 .wy-side-nav-search {
   background-color: #0b3860;

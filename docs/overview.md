@@ -1,4 +1,4 @@
-# DATABASE SCHEMA OVERVIEW
+# Overview of standard data model
 
 Following [key concepts](keyconcepts.md), the Risk Data schema includes four components:
 
@@ -6,6 +6,7 @@ Following [key concepts](keyconcepts.md), the Risk Data schema includes four com
 - [**Exposure**](exposure.md): asset category, occupancy and specific taxonomy, cost type and value.
 - [**Vulnerability**](vulnerability.md): model that links hazard intensity and exposure classification to measure of impact over the total exposed value.
 - [**Loss**](loss.md): modelled damage and losses produced in a risk assessment as a function of hazard, exposure and vulnerability components.
+</ul>
 
 The diagram below shows the core relationships between schema components, rather than listing all of their attributes.
 
