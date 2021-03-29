@@ -2,6 +2,10 @@
 
 Structuring and naming of risk data files within a project folder represent the simplest and most direct level of implementation of the Risk Data Standard.
 
+## Structure of project folder
+
+<br>
+
 ## Naming convention for files
 
 To help univocally identify the content of a dataset file, the filename should summarise all the key information that allow to distinquish it from the others.
@@ -30,8 +34,5 @@ Example: flood depth-damage function developed for India by JRC over industrial 
 `lss-[country_iso]-{project_name}-{hazard_type}-{occupancy}-{time}`<br>
 Example: eartquake losses over Madagascar infrastructures over the period 1920-2012 is named:<br>
 **lss-mdg-eq-infrastructrure-1920_2012**
-
-<br>
-## Folders structure
 
 <br><hr>

@@ -78,11 +78,11 @@ Losses can be rapresented in many different way: regular raster grids, points, o
 
 Schema attributes for loss map related to future river flood hazard scenarios (2050) over all types of exposure occupancies for Afghanistan.
 
-![Screenshot](img/lss_fl_afg.jpg)
+![Flood losses in Afghanistan](img/lss_fl_afg.jpg)
 
 The losses are higher in the most densely built-up area of Kabul.
 
-![Screenshot](img/lss_fl_kabul.jpg)
+![Flood losses in Kabul](img/lss_fl_kabul.jpg)
 
 |**Required**| **Attribute** | **Example** |
 |:---:| --- | --- |
@@ -101,6 +101,12 @@ The losses are higher in the most densely built-up area of Kabul.
 |*| Loss type | Ground up |
 |*| Metric | Average Annual Losses |
 |*| Unit | USD |
+
+<br>
+
+Losses can be investigated as total or for individual exposed asset and infrastructure elements.
+
+![Road losses](img/exp_afg_roads.jpg)
 
 <br>
 
