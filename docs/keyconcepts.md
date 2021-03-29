@@ -24,9 +24,12 @@ Multi-hazard means (1) the selection of multiple major hazards that the country 
 <br><br>
 <li class="lis"><b>Disaster Risk:</b> The potential loss of life, injury, or destroyed or damaged assets which could occur to a system, society or a community in a specific period of time, determined probabilistically as a function of hazard, exposure, vulnerability and coping capacity.<br>
 Disaster risk comprises different types of potential impacts and losses (direct and indirect, tangible and intangible) which are sometimes difficult to quantify. Nevertheless, with knowledge of the prevailing hazards, the patterns of population and socio-economic development and their tendency to suffer impacts, disaster risks can be assessed and mapped, at least in broad terms.
-</ul><br>
+</ul>
+(source: UNDRR terminology)<br>
 
 ## Risk data examples
+
+The four components of risk assessment are showcased below for an assessment of flood risk over tangible asset in the urban area of Kabul (Afghanistan).
 
 <table><tr>
 <td align="center" width=50% bgcolor="#0b3860"><b><font color="#fff">Hazard: map of flood water depth</font></b></td>
@@ -41,9 +44,10 @@ Disaster risk comprises different types of potential impacts and losses (direct 
 
 ## Background documentation
 
-- [Solving the Puzzle report](http://riskdatalibrary.org/assets/docs/communityReports/solving-the-puzzle-report.pdf) provides a community perspective on disaster risk information with focus on high-impact activities that will promote the creation and sharing of risk data and model.
+- [**Solving the Puzzle report**](http://riskdatalibrary.org/assets/docs/communityReports/solving-the-puzzle-report.pdf) provides a community perspective on disaster risk information with focus on high-impact activities that will promote the creation and sharing of risk data and model.
 
-- [UNDRR terminology](https://www.undrr.org/terminology) of Disaster Risk Reduction
+- [**UNDRR terminology**](https://www.undrr.org/terminology) of Disaster Risk Reduction
 
+- [**Understanding Risk**](https://understandrisk.org/) forum organised by GFDRR
 
 <br><hr>
