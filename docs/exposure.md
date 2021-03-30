@@ -46,22 +46,26 @@ Exposure data can be stored at multiple scales, more often using vectors, namely
 
 ###Exposure map for Kabul
 
-Text
+Two exposure datasets are shown together in the example: building footprints polygons and population density raster at 90 m resolution.
 
-![Screenshot](img/.jpg)
+![Exposure example](img/sample_exp.jpg)
 
 |**Required**| **Attribute** | **Example** |
 |:---:| --- | --- |
-|*| Hazard type | Flood |
-|*| Analysis type | Probabilistic |
-|*| Calculation method | Simulated |
-|| Geographic area | Kabul |
-|| Frequency type | Return Period |
-|| occurrence probability | 100 years |
-|| Occurence time (start) | 1958 |
-|| Occurence time (end) | 2001 |
-|| Occurence time (span) | 44 years |
-|*| Hazard process | River flood |
-|*| Unit of measure | Water depth (m) |
+|*| Geographic coverage | Afghanistan |
+|*| Exposure category | Buildings |
+|*| Occupancy | Mixed |
+|| Taxonomy | OSM |
+|*| Value type | Structure |
+|*| Unit of measure | USD |
+
+|**Required**| **Attribute** | **Example** |
+|:---:| --- | --- |
+|*| Geographic coverage | Afghanistan |
+|*| Exposure category | Indicators |
+|*| Occupancy | Residential |
+|| Period of occupancy | Night |
+|*| Value type | Other |
+|*| Unit of measure | Count |
 
 <br><hr>

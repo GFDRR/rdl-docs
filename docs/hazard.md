@@ -9,12 +9,12 @@ classDiagram
     Event set: Hazard type
     Event set: Analytical method
     class Event1{
-      occurrence frequency
+      Occurrence frequency
       Time reference
       Hazard trigger
     }
     class Event2{
-      occurrence frequency
+      Occurrence frequency
       Time reference
       Hazard trigger
     }
@@ -67,7 +67,7 @@ The schema specifies which type of analysis and data methodology that has genera
 |**Required**| **Attribute** | **Description** | **Type** |
 |:---:| --- | --- | --- |
 || Frequency type | The frequency of occurrence of the present event | <ul><li>Rate of Exceedence<li>Probability of Exceedence<li>Return Period</ul> |
-|| occurrence probability | For probabilistic scenario, the occurrence probability is expressed according to frequency type | Text |
+|| Occurrence probability | For probabilistic scenario, the occurrence probability is expressed according to frequency type | Text |
 || Occurence time (start) | Start date of the period used to infer the occurrence probability | Date (year) |
 || Occurence time (end) | End date of the period used to specify the occurrence probability | Date (year) |
 || Occurence time (span) | The duration of the period used to specify the occurrence probability | Number of years |
@@ -143,7 +143,7 @@ Schema attributes for flood hazard map related to occurrence probability of a ri
 |*| Calculation method | Simulated |
 || Geographic area | Kabul |
 || Frequency type | Return Period |
-|| occurrence probability | 100 years |
+|| Occurrence probability | 100 years |
 || Occurence time (start) | 1958 |
 || Occurence time (end) | 2001 |
 || Occurence time (span) | 44 years |
@@ -163,7 +163,7 @@ Schema attributes for earthquake hazard map related to occurrence probability of
 |*| Analysis type | Probabilistic |
 |*| Calculation method | Simulated |
 || Frequency type | Return Period |
-|| occurrence probability | 1000 years |
+|| Occurrence probability | 1000 years |
 || Occurence time (start) | 800 |
 || Occurence time (end) | 2001 |
 || Occurence time (span) | 1200 years |

@@ -12,7 +12,7 @@ classDiagram
     Model: Link data
 
     class Map{
-      occurrence frequency
+      Occurrence frequency
       Time reference
       Impact type
       Loss type
@@ -20,7 +20,7 @@ classDiagram
       Loss unit
     }
     class Curve{
-      occurrence frequency
+      Occurrence frequency
       Time reference
       Impact type
       Loss type
@@ -57,7 +57,7 @@ The main attributes of the **loss model** describe the hazard and process for wh
 |**Required**| **Attribute** | **Description** | **Type** |
 |:---:| --- | --- | --- |
 || Frequency type | The frequency of occurrence of the present event | <ul><li>Rate of Exceedence<li>Probability of Exceedence<li>Return Period</ul> |
-|| occurrence probability | For probabilistic scenario, the occurrence probability is expressed according to frequency type | Text |
+|| Occurrence probability | For probabilistic scenario, the occurrence probability is expressed according to frequency type | Text |
 
 <br>Additional attributes are specific to loss, describing the type of impact, the type of loss, the loss metric and the unit used to measure it.
 
@@ -96,7 +96,7 @@ The losses are higher in the most densely built-up area of Kabul.
 | | Vulnerability link |  |
 | | Time year | 2050 |
 | | Frequency type | Return Period |
-| | occurrence probability | RP 5-1000 years |
+| | Occurrence probability | RP 5-1000 years |
 |*| Impact | Direct |
 |*| Loss type | Ground up |
 |*| Metric | Average Annual Losses |
@@ -122,7 +122,7 @@ Insert example of recorded empirical losses.
 |*| Analysis type | Probabilistic |
 |*| Calculation method | Simulated |
 || Frequency type | Return Period |
-|| occurrence probability | 1000 years |
+|| Occurrence probability | 1000 years |
 || Occurence time (start) | 800 |
 || Occurence time (end) | 2001 |
 || Occurence time (span) | 1200 years |
