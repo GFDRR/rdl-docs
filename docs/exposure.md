@@ -59,6 +59,8 @@ Two exposure datasets are shown together in the example: building footprints pol
 |*| Value type | Structure |
 |*| Unit of measure | USD |
 
+<br>
+
 |**Required**| **Attribute** | **Example** |
 |:---:| --- | --- |
 |*| Geographic coverage | Afghanistan |

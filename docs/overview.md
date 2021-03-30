@@ -53,7 +53,7 @@ In addition to schema-specific attributes, each dataset is identified by a list 
 
 | **Required** | **Attribute** | **Description** | **Type** |
 |:---:|---|---|---|
-|*| component | Schema to be used | <ul><li>Hazard<li>Exposure<li>Vulnerability<li>Loss |
+|*| Component | Schema to be used | <ul><li>Hazard<li>Exposure<li>Vulnerability<li>Loss |
 |*| Source model | Name of source model | Text |
 |*| Release date | Model release date | Date |
 | | Project name | Project under which data has been produced | Text |
@@ -63,5 +63,19 @@ In addition to schema-specific attributes, each dataset is identified by a list 
 | | Version | Version of the dataset | Number  |
 |*| Geo coverage | ISO code(s) of countries covered | ISOa3 country code |
 |*| License code | Type of license | Licensing options |
+
+<br>
+Other attributes are specific to individual resources, covering level of aggregation, resolution and format.
+
+| **Required** | **Attribute** | **Type** |
+|:---:|---|---|
+|*| Resource name | Text |
+|*| Aggregation type | <ul><li>Footprints<li>Grid<li>Administrative boundaries<li>Points or lines<li>N/A</ul> |
+| | Description | Text |
+| | Reference coordinate system | CRS EPSG |
+| | Horizontal resolution | n unit |
+| | Format | ext |
+| | Download Url | url |
+
 
 <br><hr>
