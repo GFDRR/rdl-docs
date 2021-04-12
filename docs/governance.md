@@ -4,7 +4,7 @@ This document provides an overview of the governance and processes used to devel
 
 This document is intended to be a useful reference point for anyone involved in contributing to the standard. It focuses on the roles, responsibilities and processes. This is intended to complete the [contributor guide](https://github.com/GFDRR/rdl-standard/blob/main/CONTRIBUTING.md) which outlines the range of ways in which contributors might support development of the standard.
 
-<br><hr>
+<hr>
 
 ## Our governance principles
 
@@ -18,7 +18,7 @@ As a group we are committed to [the OpenStand principles](https://open-stand.org
 
 We are working to improve our process to ensure that we are living up to these principles. This document provides a reference point for our current practices.
 
-<br><hr>
+<hr>
 
 ## Intellectual property
 
@@ -26,7 +26,7 @@ All the outputs from this standards initiative are openly licensed under a CC-BY
 
 Additional documentation and source code produced by this initiative will also be published under a suitable open licence. We encourage other organisations to similarly licence their work, so that it can be used for the benefit of the wider community.
 
-<br><hr>
+<hr>
 
 ## Roles and responsibilities
 
@@ -83,7 +83,7 @@ across a wide range of organisations.
 All working documents, issue reporting and decisions made within these groups will be 
 reviewed and communicated via this repository.
 
-<br><hr>
+<hr>
 
 ## How we collaborate
 
@@ -96,7 +96,7 @@ We will use the:
 - [Issues](https://github.com/GFDRR/rdl-standard/issues) to propose and discuss changes to the standard
 - [Project boards](https://github.com/GFDRR/rdl-standard/projects) to provide transparency of the current progress and priorities around its development
 
-<br><hr>
+<hr>
 
 ## Managing and proposing changes
 
@@ -112,7 +112,7 @@ We will then:
 - once we feel that a broad consensus has been achieved around the proposed changes, we will update the current Working Draft with suitable wording
 - after leaving appropriate time for further comment, we will release a new version of the specification
 
-<br><hr>
+<hr>
 
 ## Managing releases
 
