@@ -6,19 +6,19 @@ edit_uri: tree/main/docs
 
 nav:
 - Risk Data Library:
-    - 'Overview': 'index.md'
+    - 'Introduction': 'index.md'
     - 'Use cases': 'usecases.md'
     - 'Key concepts': 'keyconcepts.md'
     - 'Core standards': 'standards.md'
     - 'Taxonomy': 'taxonomy.md'
 - Data model:
-    - 'Overview': 'overview.md'
+    - 'Overview': 'datamodel.md'
     - 'Hazard': 'hazard.md'
     - 'Exposure': 'exposure.md'
     - 'Vulnerability': 'vulnerability.md'
     - 'Loss': 'loss.md'
 - Implementation:
-    - 'Overview': 'implementation.md'
+    - 'RDL adoption': 'implementation.md'
     - 'Local': 'local.md'
     - 'JKAN catalogue': 'jkan.md'
     - 'PostGRESQL DB': 'postgres.md'
