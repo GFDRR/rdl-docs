@@ -8,7 +8,7 @@ The RDL has been developped to better support governments and their population i
 
 <hr>
 
-This documentation provides a technical overview of the RDL, its different elements, and how to implement it in your project*
+This documentation provides a technical overview of the RDL, its different elements, and how to implement it in your project.
 
 - [**Core standards**](standards.md): description of standards adopted by the RDL
 <br>
