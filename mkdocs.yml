@@ -19,8 +19,7 @@ nav:
     - 'Local': 'local.md'
     - 'JKAN catalogue': 'jkan.md'
     - 'PostGRESQL DB': 'postgres.md'
-- Tutorials:
-    - 'Deploy RDL': 'deploy.md'
+- 'Tutorials': 'deploy.md'
     - 'Prepare data': 'data-preparation.md'
     - 'Publish data': 'data-import.md'
 - 'Roadmap': 'roadmap.md'
