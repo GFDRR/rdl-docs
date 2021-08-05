@@ -8,7 +8,7 @@ The RDL has been developped to better support governments and their population i
 
 <hr>
 
-*Provide a technical overview of the RDL standards and data model, describing how it fits together in terms of the core standards, taxonomies, the core model and how it can be implemented*
+This documentation provides a technical overview of the RDL, its different elements, and how to implement it in your project*
 
 - [**Core standards**](standards.md): description of standards adopted by the RDL
 <br>
@@ -16,7 +16,7 @@ The RDL has been developped to better support governments and their population i
 <br>
 - [**Data model**](datamodel.md): how the data are organised using the RDL schema
 <br>
-- [**Implementation**](implementation.md): how to apply the RDL standard for your project
+- [**Implementation**](implementation.md): how to apply the RDL in your project
 <br>
 - [**Tutorials**](tutorials.md): to support the adoption and use of the standard for different use cases
 <br>
