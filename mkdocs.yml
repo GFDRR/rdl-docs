@@ -5,20 +5,17 @@ repo_url: https://github.com/GFDRR/rdl-docs
 edit_uri: tree/main/docs
 
 nav:
-- Risk Data Library:
-    - 'Introduction': 'index.md'
-    - 'Use cases': 'usecases.md'
-    - 'Key concepts': 'keyconcepts.md'
-    - 'Core standards': 'standards.md'
-    - 'Taxonomy': 'taxonomy.md'
-- Data model:
-    - 'Overview': 'datamodel.md'
+- 'Introduction': 'index.md'
+- 'Use cases': 'usecases.md'
+- 'Key concepts': 'keyconcepts.md'
+- 'Core standards': 'standards.md'
+- 'Taxonomy': 'taxonomy.md'
+- 'Data model': 'datamodel.md'
     - 'Hazard': 'hazard.md'
     - 'Exposure': 'exposure.md'
     - 'Vulnerability': 'vulnerability.md'
     - 'Loss': 'loss.md'
-- Implementation:
-    - 'RDL adoption': 'implementation.md'
+- 'Implementation': 'implementation.md'
     - 'Local': 'local.md'
     - 'JKAN catalogue': 'jkan.md'
     - 'PostGRESQL DB': 'postgres.md'
@@ -26,11 +23,10 @@ nav:
     - 'Deploy RDL': 'deploy.md'
     - 'Prepare data': 'data-preparation.md'
     - 'Publish data': 'data-import.md'
-- About:
-    - 'Roadmap': 'roadmap.md'
-    - 'History': 'history.md'
-    - 'Governance': 'governance.md'
-    - 'License': 'license.md'
+- 'Roadmap': 'roadmap.md'
+- 'History': 'history.md'
+- 'Governance': 'governance.md'
+- 'License': 'license.md'
 
 theme: readthedocs
 
