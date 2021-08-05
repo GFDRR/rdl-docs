@@ -1,11 +1,14 @@
 # Introduction
 
-The Risk Data Library (RDL) standard provides a data model for the four components of risk data: **hazard**, **exposure**, **vulnerability** and **modelled impact and losses**.
-The standard defines a consistent framework for describing these data types, with risk-specific metadata.
+The Risk Data Library standard (RDL) is an open data standard making it easier to create, share, find and use disaster and climate risk data. 
 
-The RDL standard makes datasets significantly easier to identify, understand and integrate into other applications, as they are formatted with a common structure and metadata tailored to the requirements of risk modelling.
+It provides a common and simple language to describe the different data used in conducting a disaster risk assessment: **hazard**, **exposure**, **vulnerability**, and **risk** (loss or impact) data. 
 
-The RDL standard is expected to benefit disaster risk analysts, Disaster Risk Management (DRM) and Disaster Risk Financing and Insurance (DRFI) practitioners and academic researchers applying risk analytics in the in the development, reinsurance and humanitarian sectors. 
+The RDL aims to improve the availability and quality of disaster and climate risk data globally, providing a way to combine data from different sources and organizations. 
+
+It is intended to be used by a broad range of stakeholders, development and humanitarian organizations, research and academia, (re)insurance companies,  with the goal of supporting  governments and their population in managing disaster risk and adapting to climate change. 
+
+The RDL is a collaborative project managed by the Global Facility for Disaster Reduction and Recovery (GFDRR) of the World Bank Group.
 
 <hr>
 
