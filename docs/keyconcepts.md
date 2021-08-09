@@ -34,8 +34,8 @@ Disaster risk information also includes the results of disaster risk assessments
 
 Source: preventionweb.net/terminology/disaster-risk-information
 
-![Screenshot](img/risk_assessment.png)
-(adapted from "[Understanding risk in an evolving world, World Bank, 2014](https://openknowledge.worldbank.org/handle/10986/20682)")
+<!--![Screenshot](img/risk_assessment.png)
+(adapted from "[Understanding risk in an evolving world, World Bank, 2014](https://openknowledge.worldbank.org/handle/10986/20682)")-->
 
 ## Hazard
 
