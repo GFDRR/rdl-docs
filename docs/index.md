@@ -1,25 +1,20 @@
+<!-- https://hackmd.io/bdFuvXOfTXWzyHS44r1VXQ?both -->
+
 # Risk Data Library Standard
 
-The Risk Data Library standard (RDL) is an open data standard making it easier to create, share, find and use disaster and climate risk data. It provides a common and simple language to describe the different data used in conducting a disaster risk assessment: **hazard**, **exposure**, **vulnerability**, and **risk** (loss or impact) data. 
+The **Risk Data Library Standard (RDLS)** is an open data standard to make it easier to work with disaster and climate risk data. It provides a common description of the data used and produced in risk assessments, including **hazard**, **exposure**, **vulnerability**, and **modelled loss**, or impact, data.
 
-The RDL aims to improve the availability and quality of disaster and climate risk data globally. It is intended to be used by a broad range of stakeholders including development and humanitarian organizations, research and academia, as well as (re)insurance companies.
+The RDLS provides a unique way to create, store, exchange and use disaster different risk information together. It is at the core of the Risk Data Library, a suite of open source tools to work with disaster and climate risk data.
 
-The RDL has been developped to better support governments and their population in managing disaster risk and adapting to climate change. It is a collaborative project managed by the [Global Facility for Disaster Reduction and Recovery (GFDRR)](https://www.gfdrr.org/) of the World Bank Group.
+The RDLS has been adopted by World Bank for disaster and climate risk assessments but is intended to be used by anyone involved in generating or using disaster risk information.
 
-<hr>
+This documentation provides a technical overview of the RDLS and its different elements:
 
-This documentation provides a technical overview of the RDL, its different elements, and how to implement it in your project.
+- [**Core standards**](standards.md): description of existing open data standards used in the RDLS;
+- [**Taxonomy**](taxonomy.md): details of taxonomies adopted by the RDLS;
+- [**Data model**](datamodel.md): how to organize and link the data using the RDLS schema;
+- [**Implementation**](implementation.md): how to apply the RDLS in your project;
+- [**Tutorials**](tutorials.md): how to adopte and use RDLS for different pruposes;
+- [**About**](roadmap.md): other information on the roadmap, history,  governance and license.
 
-- [**Core standards**](standards.md): description of standards adopted by the RDL
-<br>
-- [**Taxonomy**](taxonomy.md): details of taxonomies adopted by the RDL
-<br>
-- [**Data model**](datamodel.md): how the data are organised using the RDL schema
-<br>
-- [**Implementation**](implementation.md): how to apply the RDL in your project
-<br>
-- [**Tutorials**](tutorials.md): to support the adoption and use of the standard for different use cases
-<br>
-- [**About**](roadmap.md): summary of planned developments to the data model and standard
-
-<br><hr>
+The RDL is a collaborative project managed by the [Global Facility for Disaster Reduction and Recovery (GFDRR)](https://www.gfdrr.org/) of the World Bank Group.

@@ -1,12 +1,7 @@
-# Standards
+<!-- https://hackmd.io/mqMgeciKQTCGvxjCR4946Q -->
 
-list of existing data exchange formats, taxonomies and other relevant/related standards, with:
+# Core Standards
 
- - a link to more information
- - a brief note about their purpose or value in the domain
- - how they relate to the RDL model and the library
+RDLS has been built based on existing open data standards.
 
-This would be a useful reference for anyone looking to improve exchange of risk data, or understand how the RDL data model aligns with other standards.
-Intention isn't to have an exhaustive list, just reference the most important standards that are used in the data model and implementations.
-
-<br><hr>
+In this section you will find a short summary of the core standards upon which the RDL data model has been built.

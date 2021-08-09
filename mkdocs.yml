@@ -6,7 +6,7 @@ edit_uri: tree/main/docs
 
 nav:
 - 'Introduction': 'index.md'
-- 'Use cases': 'usecases.md'
+<!-- - 'Use cases': 'usecases.md' -->
 - 'Key concepts': 'keyconcepts.md'
 - 'Core standards': 'standards.md'
 - 'Taxonomy': 'taxonomy.md'
