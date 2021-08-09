@@ -47,6 +47,7 @@ The **RDLS Hazard Taxonomy** classifies hazard phenomena as main hazard (8 categ
 | Strong Wind | Tropical cyclone |
 
 </div>
+<br/>
 
 ### Other hazard taxonomies
 
@@ -69,7 +70,7 @@ List of other hazard taxonomies below:
 
 The exposure schema can accomodate different descriptions of assets using a taxonomy which describes their characteristics (e.g. building occupancy, construction, age, height, etc. or road surface type).
 
-### GED4all taxonomy (recommended)
+### GED4all (recommended)
 
 [**GED4all**](ged4all.md) has been developed by GFDRR under the UK-DFID Challenge Fund, this open exposure database schema is meant for multi-hazard risk analysis. GED4ALL can be populated with building-level data from OpenStreetMap (OSM) following the [guidance](https://wiki.openstreetmap.org/wiki/GED4ALL) from the Humanitarian OSM Team, which collects contributions from the community on how OSM tags can be best aligned with the GED4ALL taxonomy. This is the suggested option for classification of exposure data in the RDL.
 

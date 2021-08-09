@@ -8,7 +8,7 @@ nav:
 - 'Introduction': 'index.md'
 - 'Key concepts': 'keyconcepts.md'
 - 'Core standards': 'standards.md'
-- 'Taxonomy': 'taxonomy.md'
+- 'Taxonomies': 'taxonomy.md'
 - Data model:
     - 'Overview': 'datamodel.md'
     - 'Hazard': 'hazard.md'
