@@ -1,6 +1,6 @@
 # Overview of standard data model
 
-Following [key concepts](keyconcepts.md), the Risk Data schema includes four components:
+Following [key concepts](keyconcepts.md), the Risk Data Library Standard schema includes four components:
 
 - [**Hazard**](hazard.md): main hazard type, specific process, trigger of the hazard, occurrence frequency of event, intensity unit to measure the process and analytical method.
 - [**Exposure**](exposure.md): asset category, occupancy and specific taxonomy, cost type and value.
